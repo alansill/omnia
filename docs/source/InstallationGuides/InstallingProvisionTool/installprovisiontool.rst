@@ -27,7 +27,9 @@ Running The Provision Tool
 
             To view the tables in the database: ``\dt``
 
-            To view the contents of the ``nodeinfo`` table: ``select * from cluster.nodeinfo`` ::
+            To verify the creation of the ``nodeinfo`` table: ``\dt cluster.nodeinfo``
+
+            To view the contents of the ``nodeinfo`` table: ``select * from cluster.nodeinfo;`` ::
 
                     id | servicetag |     admin_mac     |         hostname         |   admin_ip   | bmc_ip | ib_ip
 
