@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Omnia'
-copyright = '2022, Cassey Goveas'
+copyright = '2023, Cassey Goveas'
 author = 'Cassey Goveas'
 release = '1.4'
 
