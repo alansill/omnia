@@ -28,3 +28,6 @@ AMD servers
 
 .. versionadded:: 1.3
     AMD servers
+
+.. versionadded:: 1.4.1
+    16G servers
