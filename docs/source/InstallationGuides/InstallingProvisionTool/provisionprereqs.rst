@@ -2,6 +2,17 @@ Before you run the provision tool
 ---------------------------------
 
 * (Recommended) Run ``prereq.sh`` to get the system ready to deploy Omnia. Alternatively, ensure that `Ansible 2.12.10 <https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html>`_ and `Python 3.8 <https://www.python.org/downloads/release/python-380/>`_ are installed on the system. SELinux should also be disabled.
+* Set the IP address of the control plane with a /16 subnet mask. The control plane NIC connected to remote servers (through the switch) should be configured with two IPs (BMC IP and admin IP) in a shared LOM or hybrid set up. In the case dedicated network topology, a single IP (admin IP) is required.
+
+.. figure:: ../../images/ControlPlaneNic.png
+
+            *Control plane NIC IP configuration in a LOM setup*
+
+.. figure:: ../../images/ControlPlane_DedicatedNIC.png
+
+            *Control plane NIC IP configuration in a dedicated setup*
+
+
 * Set the hostname of the control plane using the ``hostname``. ``domain name`` format.
 
     .. include:: ../../Appendices/hostnamereqs.rst
@@ -16,6 +27,9 @@ Before you run the provision tool
 
     2. `RHEL 8.x <https://www.redhat.com/en/enterprise-linux-8>`_
 
+.. caution:: **THE ROCKY LINUX OS VERSION ON THE CLUSTER WILL BE UPGRADED TO THE LATEST 8.x VERSION AVAILABLE IRRESPECTIVE OF THE PROVISION_OS_VERSION PROVIDED IN PROVISION_CONFIG.YML.**
+
+.. note:: Ensure the ISO provided has downloaded seamlessly (No corruption). Verify the SHA checksum/ download size of the ISO file before provisioning to avoid future failures.
 
 Note the compatibility between cluster OS and control plane OS below:
 
@@ -24,20 +38,16 @@ Note the compatibility between cluster OS and control plane OS below:
         | Control Plane OS    | Compute Node OS    | Compatibility    |
         +=====================+====================+==================+
         |                     |                    |                  |
-        | RHEL [2]_           | RHEL               | Yes              |
+        | RHEL [1]_           | RHEL               | Yes              |
         +---------------------+--------------------+------------------+
         |                     |                    |                  |
-        | RHEL [2]_           | Rocky              | Yes              |
-        +---------------------+--------------------+------------------+
-        |                     |                    |                  |
-        | Rocky               | RHEL               | Yes [1]_         |
+        | RHEL [1]_           | Rocky              | Yes              |
         +---------------------+--------------------+------------------+
         |                     |                    |                  |
         | Rocky               | Rocky              | Yes              |
         +---------------------+--------------------+------------------+
 
-.. [1] For a Rocky control plane and RHEL compute nodes, it is mandatory to populate ``rhel_repo_local_path`` in ``input/provision_config.yml``.
-.. [2] Ensure that control planes running RHEL have an active subscription or are configured to access local repositories. The following repositories should be enabled on the control plane: **AppStream**, **Code Ready Builder (CRB)**, **BaseOS**.
+.. [1] Ensure that control planes running RHEL have an active subscription or are configured to access local repositories. The following repositories should be enabled on the control plane: **AppStream**, **Code Ready Builder (CRB)**, **BaseOS**. For RHEL control planes running 8.5 and below, ensure that sshpass is additionally available to install or download to the control plane (from any local repository).
 
 * To set up CUDA and OFED using the provisioning tool, download the required repositories from here:
 
@@ -60,6 +70,12 @@ In the event of a mismatch, edit the file  ``/etc/sysconfig/network-scripts/ifcf
 * For RHEL target nodes not provisioned by Omnia, ensure that RedHat subscription is enabled on all target nodes. Every target node will require a RedHat subscription.
 
 * Users should also ensure that all repos (AppStream, BaseOS and CRB) are available on the RHEL control plane.
+
+* Uninstall epel-release if installed on the control plane as Omnia configures epel-release on the control plane. To uninstall epel-release, use the following commands: ::
+
+    dnf remove epel-release -y
+
+
 .. note::
     To enable the repositories, run the following commands: ::
 
@@ -72,10 +88,6 @@ In the event of a mismatch, edit the file  ``/etc/sysconfig/network-scripts/ifcf
             yum repolist enabled
 
 * Ensure that the ``pxe_nic`` and ``public_nic`` are in the firewalld zone: public.
-
-* The control plane NIC connected to remote servers (through the switch) should be configured with two IPs in a shared LOM set up. This NIC is configured by Omnia with the IP xx.yy.255.254, aa.bb.255.254 (where xx.yy are taken from ``bmc_nic_subnet`` and aa.bb are taken from ``admin_nic_subnet``) when ``network_interface_type`` is set to ``lom``. For other discovery mechanisms, only the admin NIC is configured with aa.bb.255.254 (Where aa.bb is taken from ``admin_nic_subnet``).
-
-.. image:: ../../images/ControlPlaneNic.png
 
 .. note::
 

@@ -31,6 +31,8 @@ Optional configurations managed by the provision tool
 
         * If ``mlnx_ofed_path`` is provided  in ``input/provision_config.yml`` and Mellanox NICs are available on the target nodes, OFED packages will be deployed post provisioning without user intervention.
 
+        .. note:: When leveraging the provision tool to install OFED, Omnia prevents the following packages from being upgraded: dapl* ibacm infiniband* libmlx* librdma* opensm* ibutils* perftest* openmpi by appending ``exclude=dapl* ibacm infiniband* libmlx* librdma* opensm* ibutils* perftest* openmpi`` to ``/etc/yum.conf``. For more information on this, `click here <https://xcat-docs.readthedocs.io/en/stable/advanced/networks/infiniband/mlnxofed_ib_known_issue.html>`_.
+
     **Using the Network playbook**
 
         * OFED can also be installed using `network.yml <../../Roles/Network/index.html>`_ after provisioning the servers (Assuming the provision tool did not install OFED packages).
@@ -90,11 +92,12 @@ To deploy the Omnia provision tool, run the following command ::
 
 **Preparing the control plane**
 
-a. Verifies pre-requisites such as SELinux and xCAT services status.
-b. Installs required tool packages.
-c. Verifies and updates firewall settings.
-d. Installs xCAT.
-e. Configures xCAT databases basis ``input/provision_config.yml``.
+* Verifies pre-requisites such as SELinux and xCAT services status.
+* Installs required tool packages.
+* Verifies and updates firewall settings.
+* Installs xCAT.
+* Configures xCAT databases basis ``input/provision_config.yml``.
+* Configures the control plane with NTP services for compute node synchronization.
 
 To call this playbook individually, ensure that ``input/provision_config.yml`` is updated and then run::
 
@@ -142,9 +145,9 @@ After successfully running ``provision.yml``, go to `Building Clusters <../Build
     * Post execution of ``provision.yml``, IPs/hostnames cannot be re-assigned by changing the mapping file. However, the addition of new nodes is supported as explained `here <../addinganewnode.html>`_.
 
 
-.. warning::
+.. caution::
 
     * Once xCAT is installed, restart your SSH session to the control plane to ensure that the newly set up environment variables come into effect.
     * To avoid breaking the passwordless SSH channel on the control plane, do not run ``ssh-keygen`` commands post execution of ``provision.yml``.
-
+    * Omnia installs xcat in the directory ``/root/xcat`` and sets up a DB backup in ``/root/xcat-dbback``. Do not delete these folders.
 

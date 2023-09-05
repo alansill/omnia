@@ -17,7 +17,7 @@ Using FreeIPA
 
 Enter the following parameters in ``input/security_config.yml``.
 
-.. warning:: Do not remove or comment any lines in the ``input/security_config.yml`` file.
+.. caution:: Do not remove or comment any lines in the ``input/security_config.yml`` file.
 
 +----------------------------+----------------------------------------------------------------------------------------------+
 | Parameter                  | Details                                                                                      |
@@ -80,19 +80,22 @@ Where inventory follows the format defined under inventory file in the provided 
             kinit admin  (When prompted, provide kerberos_admin_password as entered in security_config.yml)
             ipa user-add --homedir=<nfs_dir_path> --password
 
+    For example: ``ipa user-add FirstName_LastName --first=FirstName --last=LastName --password  --homedir=/home/omnia-share/FirstName_LastName``
 
 
 **Setting up Passwordless SSH for FreeIPA**
 
-Once user accounts are created, admins can enable passwordless SSH for users to run HPC jobs.
+Once user accounts are created, admins can enable passwordless SSH for users to run HPC jobs on the cluster nodes.
+
+.. note:: Once user accounts are created on FreeIPA, use the accounts to login to the target nodes to reset the password and create a corresponding home directory.
 
 To customize your setup of passwordless ssh, input parameters in ``input/passwordless_ssh_config.yml``
 
 +-----------------------+--------------------------------------------------------------------------------------------------------------------+
 | Parameter             | Details                                                                                                            |
 +=======================+====================================================================================================================+
-| user_name             | The user that requires passwordless SSH                                                                            |
-|      ``string``       |                                                                                                                    |
+| user_name             | The list of users that requires passwordless SSH. Separate the list of users using a comma.                        |
+|      ``string``       |  Eg: ``user1,user2,user3``                                                                                         |
 |      Required         |                                                                                                                    |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------+
 | authentication_type   | Indicates whether LDAP or FreeIPA is in use on the cluster.                                                        |
@@ -106,7 +109,7 @@ To customize your setup of passwordless ssh, input parameters in ``input/passwor
 | freeipa_user_home_dir | * This variable accepts the user home directory path for freeipa   configuration.                                  |
 |      ``string``       |      * If nfs mount is created for user home, make sure you provide the freeipa   users mount home directory path. |
 |      Required         |                                                                                                                    |
-|                       |      **Default value**: ``"/home"``                                                                                |
+|                       |      **Default value**: ``"/home/omnia-share"``                                                                    |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
@@ -164,7 +167,7 @@ To customize your LDAP client installation, input parameters in ``input/security
 | user_home_dir        | * This variable accepts the user home directory path for LDAP   configuration.                                       |
 |      ``string``      | * If nfs mount is created for user home, make sure you provide the freeipa   users mount home directory path.        |
 |      Required        |                                                                                                                      |
-|                      |      **Default value**: ``"/home"``                                                                                  |
+|                      |      **Default value**: ``"/home/omnia-share"``                                                                      |
 +----------------------+----------------------------------------------------------------------------------------------------------------------+
 | ldap_bind_username   | * If LDAP server is configured with bind dn then bind dn user to be   provided.                                      |
 |      ``string``      | * If this value is not provided (when bind is configured in server) then   ldap authentication fails.                |
@@ -186,17 +189,27 @@ To customize your LDAP client installation, input parameters in ``input/security
 
 **Setting up Passwordless SSH for LDAP**
 
-Once user accounts are created, admins can enable passwordless SSH for users to run HPC jobs.
+Once user accounts are created, admins can enable passwordless SSH for users to run HPC jobs on the cluster nodes.
 
-.. note:: Ensure that the control plane can reach the designated LDAP server
+.. note::
+    * Ensure that the control plane can reach the designated LDAP server.
+    * If ``enable_omnia_nfs`` is true in ``input/omnia_config.yml``, follow the below steps to configure an NFS share on your LDAP server:
+        - From the manager node:
+            1. Add the LDAP server IP address to ``/etc/exports``.
+            2. Run ``exportfs -ra`` to enable the NFS configuration.
+        - From the LDAP server:
+            1. Add the required fstab entries in ``/etc/fstab``. (The corresponding entry will be available on the compute nodes in ``/etc/fstab``)
+            2. Mount the NFS share using ``mount manager_ip: /home/omnia-share /home/omnia-share``.
+    * If ``enable_omnia_nfs`` is false in ``input/omnia_config.yml``, ensure the user-configured NFS share is mounted on the LDAP server.
+
 
 To customize your setup of passwordless ssh, input parameters in ``input/passwordless_ssh_config.yml``
 
 +--------------------------+-------------------------------------------------------------------------------------------------------+
 | Parameter                | Details                                                                                               |
 +==========================+=======================================================================================================+
-| user_name                | The user that requires passwordless SSH                                                               |
-|      ``string``          |                                                                                                       |
+| user_name                | The list of users that requires passwordless SSH. Separate the list of users using a comma.           |
+|      ``string``          |  Eg: ``user1,user2,user3``                                                                            |
 |      Required            |                                                                                                       |
 +--------------------------+-------------------------------------------------------------------------------------------------------+
 | authentication_type      | Indicates whether LDAP or FreeIPA is in use on the cluster.                                           |
@@ -210,7 +223,7 @@ To customize your setup of passwordless ssh, input parameters in ``input/passwor
 | ldap_organizational_unit | * Distinguished name i.e dn in ldap is used to identify an entity in a   LDAP.                        |
 |      ``string``          | * This variable includes the organizational unit (ou) which is used to   identifies user in the LDAP. |
 |      Required            | * Only provide ou details i.e ou=people, as domain name and userid is   accepted already.             |
-|                          | * By default ou=People                                                                                |
+|                          | **Default value**: ``people``                                                                         |
 +--------------------------+-------------------------------------------------------------------------------------------------------+
 
 
