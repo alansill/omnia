@@ -1,41 +1,85 @@
-﻿Sl.No,Metric Type,Metric Name,Possible Values,Scenario for No data/Unknown,Comments
-1,Regular Metric,BlockedProcesses,No Data,"* ``/proc/stat`` file is inaccessible
-",
-2,Regular Metric,CPUSystem,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-3,Regular Metric,CPUWait,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-4,Regular Metric,ErrorsRecv,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",Error packets received  for Individual network interfaces will be populated
-5,Regular Metric,ErrorsSent,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",Error packets sent  for Individual network interfaces will be populated
-6,Regular Metric,HardwareCorruptedMemory,Metric Value/ No Data,"Populates ""No data"" in following cases:                                                                                                     1. This could happen if the /proc/meminfo file is inaccessible    2.OMNIA telemetry service encounters an exception in retrieving the information",
-7,Regular Metric,MemoryFree,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-8,Regular Metric,MemoryTotal,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-9,Regular Metric,MemoryAvailable,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-10,Regular Metric,MemoryPercent,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-11,Regular Metric,MemoryUsed,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-12,Regular Metric,MemoryActive,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-13,Regular Metric,MemoryInactive,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-14,Regular Metric,MemoryCached,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-15,Regular Metric,MemoryShared,Metric Value/ No Data,"Populates ""No data"" in following cases:                                            1.This could happen when the 'psutil' library encounters errors            2.OMNIA telemetry service encounters an exception in retrieving the information                                                                        ",
-16,Regular Metric,NodesTotal,Metric Value/ No Data,"Populates ""No data"" in following cases:                                              1. When Slurm is not installed                                                                        2. OMNIA telemetry service encounters an exception in retrieving the information",
-17,Regular Metric,NodesUp,Metric Value/ No Data,"Populates ""No data"" in following cases:                                              1. When Slurm is not installed                                                                        2. OMNIA telemetry service encounters an exception in retrieving the information","Node is considered up if node state is any of : idle, mixed, completing"
-18,Regular Metric,NodesDown,Metric Value/ No Data,"Populates ""No data"" in following cases:                                              1. When Slurm is not installed                                                                        2. OMNIA telemetry service encounters an exception in retrieving the information","Node is considered down if node state is any of: down,drained,draining,fail,failing,future,inval,maint,powered_down,powering_down,unknown"
-19,Regular Metric,QueuedJobs,Metric Value/ No Data,"Populates ""No data"" in following cases:                                              1. When Slurm is not installed                                                                        2. OMNIA telemetry service encounters an exception in retrieving the information",
-20,Regular Metric,RunningJobs,Metric Value/ No Data,"Populates ""No data"" in following cases:                                              1. When Slurm is not installed                                                                        2. OMNIA telemetry service encounters an exception in retrieving the information",
-21,Regular Metric,FailedJobs,Metric Value/ No Data,"Populates ""No data"" in following cases:                                              1. When Slurm is not installed                                                                        2. OMNIA telemetry service encounters an exception in retrieving the information",
-22,Regular Metric,SMARTHDATemp,Metric Value/ No Data,"Populates ""No data"" in following cases:                                              1.When smartctl command doesn’t give the result                                                              2. OMNIA telemetry service encounters an exception in retrieving the information",
-23,Regular Metric,UniqueUserLogin,Metric Value/ No Data,"Populates ""No data"" in following cases:                                              1.OMNIA telemetry service encounters an exception in retrieving the information",
-24,Health Check Metric,Dmesg,Pass/Fail/Unknown,,
-25,Health Check Metric,Beegfs client Reachable,Pass/Fail/Unknown,,
-26,Health Check Metric,gpu_driver_health:gpu,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                             1. When AMD/NVIDIA  accelerators are not present          2.When gpu drivers are not installed,this includes rocm and cuda installations as well                                                                        3. OMNIA telemetry service encounters an exception in retrieving the information                                        ",
-27,Health Check Metric,gpu_health_nvlink:gpu,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                             1. When AMD/NVIDIA  accelerators are not present          2.When gpu drivers are not installed,this includes rocm and cuda installations as well                                                                        3. OMNIA telemetry service encounters an exception in retrieving the information                                        ",
-28,Health Check Metric,gpu_health_pcie:gpu,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                             1. When AMD/NVIDIA  accelerators are not present          2.When gpu drivers are not installed,this includes rocm and cuda installations as well                                                                        3. OMNIA telemetry service encounters an exception in retrieving the information                                        ",
-29,Health Check Metric,gpu_health_pmu:gpu,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                             1. When AMD/NVIDIA  accelerators are not present          2.When gpu drivers are not installed,this includes rocm and cuda installations as well                                                                        3. OMNIA telemetry service encounters an exception in retrieving the information                                        ",PMU - Power management unit
-30,Health Check Metric,gpu_health_power:gpu,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                             1. When AMD/NVIDIA  accelerators are not present          2.When gpu drivers are not installed,this includes rocm and cuda installations as well                                                                        3. OMNIA telemetry service encounters an exception in retrieving the information                                        ",Power consumption
-,Health Check Metric,gpu_health_thermal  ,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                             1. When AMD/NVIDIA  accelerators are not present          2.When gpu drivers are not installed,this includes rocm and cuda installations as well                                                                        3. OMNIA telemetry service encounters an exception in retrieving the information                                        ",Thermal is GPU temperature health
-31,Health Check Metric,Kubernetespodsstatus,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                              1.When Kubernetes is not installed                                          2.OMNIA telemetry service encounters an exception in retrieving the information","Value is Pass when all pods are in running state, otherwise Fail."
-32,Health Check Metric,Kuberneteschildnode,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                              1.When Kubernetes is not installed                                          2.OMNIA telemetry service encounters an exception in retrieving the information","Value is Pass when all child nodes are in Ready state, otherwise Fail."
-33,Health Check Metric,kubernetesnodesstatus,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                              1.When Kubernetes is not installed                                          2.OMNIA telemetry service encounters an exception in retrieving the information","Value is Pass when all nodes are in Ready state, otherwise Fail."
-34,Health Check Metric,kubernetescomponentsstatus,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                              1.When Kubernetes is not installed                                          2.OMNIA telemetry service encounters an exception in retrieving the information","Value is Pass when healthz check is passed in ""kubectl get --raw=/livez?verbose"" command , otherwise fail."
-35,Health Check Metric,Smart,Pass/Fail/Unknown,"Populates ""Unknown"" in following cases:                                              1. When smartctl command doesn’t give the result                                          2. OMNIA telemetry service encounters an exception in retrieving the information",
-36,GPU Metric,gpu_temperature:gpu,Metric Value/ No Data,"Populates ""No Data"" in following cases:                                             1. When AMD/NVIDIA  accelerators are not present          2.When gpu drivers are not installed,this includes rocm and cuda installations as well                                                                        3. OMNIA telemetry service encounters an exception in retrieving the information                                        ",
-37,GPU Metric,gpu_utilization:,Metric Value/ No Data,"Populates ""No Data"" in following cases:                                             1. When AMD/NVIDIA  accelerators are not present          2.When gpu drivers are not installed,this includes rocm and cuda installations as well                                                                        3. OMNIA telemetry service encounters an exception in retrieving the information                                        ",
-38,GPU Metric,gpu_utilization:average ,Metric Value/ No Data,"Populates ""No Data"" in following cases:                                             1. When AMD/NVIDIA  accelerators are not present          2.When gpu drivers are not installed,this includes rocm and cuda installations as well                                                                        3. OMNIA telemetry service encounters an exception in retrieving the information                                        ",
+﻿Sl.No,Metric Type,Metric Name,Error value,Potential cause(s),Additional Information
+1,Regular Metric,BlockedProcesses,No Data,"* ``/proc/stat`` file is inaccessible.
+* OMNIA telemetry service encounters an exception while retrieving information.",
+2,Regular Metric,CPUSystem,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+3,Regular Metric,CPUWait,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+4,Regular Metric,ErrorsRecv,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",Error packets received  for individual network interfaces will be populated.
+5,Regular Metric,ErrorsSent,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",Error packets received  for individual network interfaces will be populated.
+6,Regular Metric,HardwareCorruptedMemory,No Data,"* The ``/proc/meminfo`` file is inaccessible.
+* OMNIA telemetry service encounters an exception while retrieving information.",
+7,Regular Metric,MemoryFree,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+8,Regular Metric,MemoryTotal,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+9,Regular Metric,MemoryAvailable,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+10,Regular Metric,MemoryPercent,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+11,Regular Metric,MemoryUsed,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+12,Regular Metric,MemoryActive,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+13,Regular Metric,MemoryInactive,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+14,Regular Metric,MemoryCached,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+15,Regular Metric,MemoryShared,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+16,Regular Metric,NodesTotal,No Data,"* Slurm is not installed.
+* OMNIA telemetry service encounters an exception while retrieving information.    ",
+17,Regular Metric,NodesUp,No Data,"* Slurm is not installed.
+* OMNIA telemetry service encounters an exception while retrieving information.    ","Node is considered up if the node state is idle, mixed or,  completing."
+18,Regular Metric,NodesDown,No Data,"* Slurm is not installed.
+* OMNIA telemetry service encounters an exception while retrieving information.    ","Node is considered down if node state is down, drained, draining, fail, failing, future, inval, maint, powered_down, powering_down, or unknown"
+19,Regular Metric,QueuedJobs,No Data,"* Slurm is not installed.
+* OMNIA telemetry service encounters an exception while retrieving information.    ",
+20,Regular Metric,RunningJobs,No Data,"* Slurm is not installed.
+* OMNIA telemetry service encounters an exception while retrieving information.    ",
+21,Regular Metric,FailedJobs,No Data,"* Slurm is not installed.
+* OMNIA telemetry service encounters an exception while retrieving information.    ",
+22,Regular Metric,SMARTHDATemp,No Data,"* smartctl commands failed.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+23,Regular Metric,UniqueUserLogin,No Data,* OMNIA telemetry service encounters an exception while retrieving information. ,
+24,Health Check Metric,Dmesg,Unknown,,
+25,Health Check Metric,Beegfs client Reachable,Unknown,,
+26,Health Check Metric,gpu_driver_health:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+* OMNIA telemetry service encountered an exception.               ",
+27,Health Check Metric,gpu_health_nvlink:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+* OMNIA telemetry service encountered an exception.               ",
+28,Health Check Metric,gpu_health_pcie:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+* OMNIA telemetry service encountered an exception.               ",
+29,Health Check Metric,gpu_health_pmu:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+* OMNIA telemetry service encountered an exception.               ",PMU - Power management unit
+30,Health Check Metric,gpu_health_power:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+* OMNIA telemetry service encountered an exception.               ",Power consumption
+,Health Check Metric,gpu_health_thermal  ,Unknown,"* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+* OMNIA telemetry service encountered an exception.               ",Thermal is GPU temperature health
+31,Health Check Metric,Kubernetespodsstatus,Unknown,"* Kubernetes is not installed.
+* OMNIA telemetry service encountered an exception.",Value is Pass when all pods are in running state.
+32,Health Check Metric,Kuberneteschildnode,Unknown,"* Kubernetes is not installed.
+* OMNIA telemetry service encountered an exception.",Value is Pass when all child nodes are in Ready state.
+33,Health Check Metric,kubernetesnodesstatus,Unknown,"* Kubernetes is not installed.
+* OMNIA telemetry service encountered an exception.",Value is Pass when all nodes are in Ready state.
+34,Health Check Metric,kubernetescomponentsstatus,Unknown,"* Kubernetes is not installed.
+* OMNIA telemetry service encountered an exception.","Values are passed when health check is passed in the ""kubectl get --raw=/livez?verbose"" command , otherwise it fails."
+35,Health Check Metric,Smart,Unknown,"* smartctl commands failed.
+* OMNIA telemetry service encounters an exception while retrieving information. ",
+36,GPU Metric,gpu_temperature:gpu,No Data,"* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+* OMNIA telemetry service encountered an exception.               ",
+37,GPU Metric,gpu_utilization:,No Data,"* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+* OMNIA telemetry service encountered an exception.               ",
+38,GPU Metric,gpu_utilization:average ,No Data,"* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+* OMNIA telemetry service encountered an exception.               ",
