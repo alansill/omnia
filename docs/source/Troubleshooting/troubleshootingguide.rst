@@ -35,7 +35,10 @@ Checking pod status on the control plane
 
 Using telemetry information to diagnose node issues
 ----------------------------------------------------
- <TBD>
+.. csv-table:: Telemetry metrics
+   :file: ../../Tables/Metrics.csv
+   :header-rows: 1
+   :keepspace:
 
 .. |Dashboard| image:: ../images/Visualization/DashBoardIcon.png
     :height: 25px
