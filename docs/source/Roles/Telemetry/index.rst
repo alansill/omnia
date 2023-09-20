@@ -26,6 +26,14 @@ After initiation, new iDRACs can be added for ``idrac_telemetry`` acquisition by
 
     ansible-playbook add_idrac_node.yml -i inventory
 
+**Modifying telemetry information**
+
+To modify how data is collected from the cluster, modify the variables in ``omnia/input/telemetry_config.yml`` and re-run the ``telemetry.yml`` playbook.
+
+* When ``omnia_telemetry_support`` is set to false, Omnia Telemetry Acquisition service will be stopped on all cluster nodes provided in the passed inventory.
+* When ``omnia_telemetry_support`` is set to true, Omnia Telemetry Acquisition service will be restarted on all cluster nodes provided in the passed inventory.
+* To start or stop the collection of regular metrics, health check metrics, or GPU metrics, update the values of ``collect_regular_metrics``, ``collect_health_check_metrics``, or ``collect_gpu_metrics``. For a list of all metrics collected, `click here <>`_.
+
 .. note::
     * The passed inventory should have an idrac group, if ``idrac_telemetry_support`` is true.
     * If ``omnia_telemetry_support`` is true, then the inventory should have manager and compute groups along with optional login group.

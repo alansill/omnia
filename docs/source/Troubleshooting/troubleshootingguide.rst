@@ -33,6 +33,10 @@ Checking pod status on the control plane
    * Select the pod you need to troubleshoot from the output of ``kubectl get pods -A``
    * Check the status of the pod by running ``kubectl describe pod <pod name> -n <namespace name>``
 
+Using telemetry information to diagnose node issues
+----------------------------------------------------
+ <TBD>
+
 .. |Dashboard| image:: ../images/Visualization/DashBoardIcon.png
     :height: 25px
 
