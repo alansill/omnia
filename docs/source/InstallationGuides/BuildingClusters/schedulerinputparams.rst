@@ -28,6 +28,7 @@ These parameters are located in ``input/omnia_config.yml``, ``input/security_con
    :file: ../../Tables/security_config_ldap.csv
    :header-rows: 1
    :keepspace:
+
 **storage_config.yml**
 
 
@@ -104,6 +105,15 @@ These parameters are located in ``input/omnia_config.yml``, ``input/security_con
 |                                 |                                                                                                                                                                                                                                                      |
 |                                 |      **Default values**: ``/home/connauthfile``                                                                                                                                                                                                      |
 +---------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+**telemetry_config.yml**
+
+.. csv-table:: Parameters
+   :file: ../../Tables/telemetry_config.csv
+   :header-rows: 1
+   :keepspace:
+
+
 
 Click here for more information on `FreeIPA, LDAP <Authentication.html>`_, `BeeGFS <BeeGFS.html>`_ or, `NFS <NFS.html>`_.
 

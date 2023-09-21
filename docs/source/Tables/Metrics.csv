@@ -44,8 +44,12 @@ Regular Metric,FailedJobs,No Data,"* Slurm is not installed.
 Regular Metric,SMARTHDATemp,No Data,"* smartctl commands failed.
 * OMNIA telemetry service encounters an exception while retrieving information. ",
 Regular Metric,UniqueUserLogin,No Data,* OMNIA telemetry service encounters an exception while retrieving information. ,
-Health Check Metric,Dmesg,Unknown,,
-Health Check Metric,Beegfs client Reachable,Unknown,,
+Health Check Metric,Dmesg,Unknown/fail,"* [Unknown]OMNIA telemetry service encounters an exception while retrieving information. 
+* [Unknown] The dmesg command was not found on the cluster node.
+* [Fail] The dmesg command returned an error.",
+Health Check Metric,Beegfs client Reachable,Unknown/fail,"* [Unknown]OMNIA telemetry service encounters an exception while retrieving information.
+* [Unknown] BeeGFS is not installed or inactive.  
+* [Fail] The BeeGFS client service has failed or the node is not present in reachable lists of BeeGFS clients.",
 Health Check Metric,gpu_driver_health:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
 * OMNIA telemetry service encountered an exception.               ",
