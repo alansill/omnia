@@ -83,7 +83,7 @@ Datasources configured by Omnia can be viewed as seen below.
 
     .. image:: ../../images/Grafana_ControlPlaneLoki.png
 
-    iii. The log browser allows users to filter logs by job, node and/or user.
+    iii. The log browser allows you to filter logs by job, node and/or user.
 
 Ex: ::
 
@@ -91,6 +91,27 @@ Ex: ::
     (job="compute log messages") |= "nodename" |="node_username"
 
 
+**To use Grafana to view telemetry data**
+
+    i. Login to the Grafana UI by connecting to the cluster IP of grafana service obtained above via port 5000. That is ``http://xx.xx.xx.xx:5000/login``
+
+    ii. In the Explore page, select **telemetry-postgres**.
+
+    .. image:: ../../images/Grafana_ControlPlaneLoki.png
+
+    iii. The query builder allows you to create SQL commands that can be used to query the ``omnia_telemetry.metrics`` table. Filter the data required using the following fields:
+
+        * **id**: The name of the metric.
+        * **context**: The type of metric being collected (Regular Metric, Health Check Metric and GPU metric).
+        * **label**: A combined field listing the **id** and **context** row values.
+        * **value**: The value of the metric at the given timestamp.
+        * **unit**: The unit measure of the metric (eg: Seconds, kb, percent, etc.)
+        * **system**: The service tag of the cluster node.
+        * **hostname**: The hostname of the cluster node.
+        * **time**: The timestamp at which the metric was polled from the cluster node.
+
+    If you are more comfortable using SQL queries over the query builder, click on **Edit SQL** to directly provide your query.
+    Optionally, the data returned from a query can be viewed as a graph.
 
 **Visualizations**
 
