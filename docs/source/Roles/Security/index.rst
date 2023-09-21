@@ -189,5 +189,7 @@ The inventory should contain compute, manager, login as per the inventory file i
 
     * To enable security features on the login node, ensure that ``enable_secure_login_node`` in ``input/security_config.yml`` is set to true.
     * To customize the security features on the login node, fill out the parameters in ``input/login_node_security_config.yml``.
+    * If a subsequent run of ``security.yml`` fails, the ``security_config.yml`` file will be unencrypted.
+
 
 .. caution:: No users/groups will be created by Omnia.
