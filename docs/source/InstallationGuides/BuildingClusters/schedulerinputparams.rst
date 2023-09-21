@@ -1,7 +1,7 @@
 Input parameters for the cluster
 -------------------------------------
 
-These parameters are located in ``input/omnia_config.yml``, ``input/security_config.yml`` and [optional] ``input/storage_config.yml``.
+These parameters are located in ``input/omnia_config.yml``, ``input/security_config.yml``, ``input/telemetry_config.yml`` and [optional] ``input/storage_config.yml``.
 
 .. caution:: Do not remove or comment any lines in the ``input/omnia_config.yml``, ``input/security_config.yml`` and [optional] ``input/storage_config.yml`` file.
 

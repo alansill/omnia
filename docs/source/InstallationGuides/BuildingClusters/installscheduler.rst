@@ -8,7 +8,7 @@ Building clusters
     * Without the login node, Slurm jobs can be scheduled only through the manager node.
 
 2. Create an inventory file in the *omnia* folder. Check out the `sample inventory for more information <../../samplefiles.html>`_.
-    * *[Manager]* group should contain the manager node IP address followed by the login node IP address.
+    * *[Manager]* group should contain the manager node IP address
     * *[compute]* group should contain all compute node IP addresses.
     * *[login]* group should contain the login node IP.
 
