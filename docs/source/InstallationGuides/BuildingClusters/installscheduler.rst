@@ -1,13 +1,14 @@
 Building clusters
 ------------------
 
-1. In the ``input/omnia_config.yml``, ``input/security_config.yml`` and [optional] ``input/storage_config.yml`` files, provide the `required details <schedulerinputparams.html>`_.
+1. In the ``input/omnia_config.yml``, ``input/security_config.yml``, ``input/telemetry_config.yml`` and [optional] ``input/storage_config.yml`` files, provide the `required details <schedulerinputparams.html>`_.
 
 .. note::
     * Use the parameter ``scheduler_type`` in ``input/omnia_config.yml`` to customize what schedulers are installed in the cluster.
     * Without the login node, Slurm jobs can be scheduled only through the manager node.
 
 2. Create an inventory file in the *omnia* folder. Check out the `sample inventory for more information <../../samplefiles.html>`_.
+
     * *[Manager]* group should contain the manager node IP address
     * *[compute]* group should contain all compute node IP addresses.
     * *[login]* group should contain the login node IP.
@@ -41,15 +42,16 @@ To run ``omnia.yml``: ::
 
                 - ``ansible-vault edit omnia_config.yml --vault-password-file .omnia_vault_key`` -- To edit the file.
 
-        * It is suggested that you use the ansible-vault view or edit commands and that you do not use the ansible-vault decrypt or encrypt commands. If you have used the ansible-vault decrypt or encrypt commands, provide 644 permission to ``omnia_config.yml``.
+    * Use the ansible-vault view or edit commands and not the ansible-vault decrypt or encrypt commands. If you have used the ansible-vault decrypt or encrypt commands, provide 644 permission to the parameter files.
 
 **Setting up a shared home directory**
 
 .. image:: ../../images/UserHomeDirectory.jpg
 
 Users wanting to set up a shared home directory for the cluster can do it in one of two ways:
-    1. **Using the head node as an NFS host**: Set ``enable_omnia_nfs`` (``input/omnia_config.yml``) to true and provide a share path which will be configured on all nodes in ``omnia_usrhome_share`` (``input/omnia_config.yml``). During the execution of ``omnia.yml``, the NFS share will be set up for access by all cluster  nodes.
-    2. **Using an external filesystem**: Configure the external file storage using ``storage.yml``. Set ``enable_omnia_nfs`` (``input/omnia_config.yml``) to false and provide the external share path in ``omnia_usrhome_share`` (``input/omnia_config.yml``). Run ``omnia.yml`` to configure access to the external share for deployments.
+
+    * **Using the head node as an NFS host**: Set ``enable_omnia_nfs`` (``input/omnia_config.yml``) to true and provide a share path which will be configured on all nodes in ``omnia_usrhome_share`` (``input/omnia_config.yml``). During the execution of ``omnia.yml``, the NFS share will be set up for access by all cluster  nodes.
+    * **Using an external filesystem**: Configure the external file storage using ``storage.yml``. Set ``enable_omnia_nfs`` (``input/omnia_config.yml``) to false and provide the external share path in ``omnia_usrhome_share`` (``input/omnia_config.yml``). Run ``omnia.yml`` to configure access to the external share for deployments.
 
 **Slurm job based user access**
 
