@@ -19,7 +19,7 @@ These parameters are located in ``input/omnia_config.yml``, ``input/security_con
 
 **security_config.yml**
 
-.. csv-table:: Parameters for freeipa
+.. csv-table:: Parameters for FreeIPA
    :file: ../../Tables/security_config_freeipa.csv
    :header-rows: 1
    :keepspace:
@@ -115,5 +115,5 @@ These parameters are located in ``input/omnia_config.yml``, ``input/security_con
 
 
 
-Click here for more information on `FreeIPA, LDAP <Authentication.html>`_, `BeeGFS <BeeGFS.html>`_ or, `NFS <NFS.html>`_.
+Click here for more information on `FreeIPA, LDAP <Authentication.html>`_, `Telemetry <../../Roles/Telemetry/index.html>`_, `BeeGFS <BeeGFS.html>`_ or, `NFS <NFS.html>`_.
 

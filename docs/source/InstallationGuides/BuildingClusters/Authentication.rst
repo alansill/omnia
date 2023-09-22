@@ -50,7 +50,8 @@ Enter the following parameters in ``input/security_config.yml``.
 
 .. note::
 
-    The ``input/omnia_config.yml`` file is encrypted on the first run of the provision tool:
+    The ``input/security_config.yml`` file is encrypted on the first run of ``security.yml`` and ``omnia.yml``:
+
         To view the encrypted parameters: ::
 
             ansible-vault view security_config.yml --vault-password-file .security_vault.key
@@ -59,7 +60,7 @@ Enter the following parameters in ``input/security_config.yml``.
 
             ansible-vault edit security_config.yml --vault-password-file .security_vault.key
 
-
+    If a subsequent run of ``security.yml`` or ``omnia.yml``, all configuration files that have been encrypted by the playbook will be unencrypted.
 
 Omnia installs a FreeIPA server on the manager node and FreeIPA clients on the cluster  and login node using one of the below commands: ::
 
