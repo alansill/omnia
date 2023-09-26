@@ -15,6 +15,8 @@ A new node can be added using the following ways:
 
     * Update the existing mapping file by appending the new entry (without the disrupting the older entries) or provide a new mapping file by pointing ``pxe_mapping_file_path`` in ``provision_config.yml`` to the new location.
 
+    .. note:: When re-running ``provision.yml`` with a new mapping file, ensure that existing IPs from the current mapping file are not provided in the new mapping file. Any IP overlap between mapping files will result in PXE failure. This can only be resolved by running `the Clean Up script <CleanUpScript.html>`_ followed by ``provision.yml``.
+
     * Run ``provision.yml``.::
 
         cd provision

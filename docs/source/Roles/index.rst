@@ -7,9 +7,8 @@ From Omnia 1.4, all of Omnia's many features are available individually. Specifi
 Below is a list of all Omnia's features:
 
 .. toctree::
-  Provision/index
+
   Network/index
-  Scheduler/index
   Security/index
   Storage/index
   Accelerator/index
