@@ -32,7 +32,7 @@ To modify how data is collected from the cluster, modify the variables in ``omni
 
 * When ``omnia_telemetry_support`` is set to false, Omnia Telemetry Acquisition service will be stopped on all cluster nodes provided in the passed inventory.
 * When ``omnia_telemetry_support`` is set to true, Omnia Telemetry Acquisition service will be restarted on all cluster nodes provided in the passed inventory.
-* To start or stop the collection of regular metrics, health check metrics, or GPU metrics, update the values of ``collect_regular_metrics``, ``collect_health_check_metrics``, or ``collect_gpu_metrics``. For a list of all metrics collected, `click here <../../Troubleshooting/troubleshootingguide.html#using-telemetry-information-to-diagnose-node-issues>`_.
+* To start or stop the collection of regular metrics, health check metrics, or GPU metrics, update the values of ``collect_regular_metrics``, ``collect_health_check_metrics``, or ``collect_gpu_metrics``. For a list of all metrics collected, `click here <TelemetryMetrics.html>`_.
 
 .. note::
     * The passed inventory should have an idrac group, if ``idrac_telemetry_support`` is true.
@@ -119,7 +119,7 @@ Ex: ::
 If ``idrac_telemetry_support`` and ``visualisation_support`` is set to true, Parallel Coordinate graphs can be used to view system statistics.
 
 .. toctree::
-
+    TelemetryMetrics
     Visualizations/index
 
 
