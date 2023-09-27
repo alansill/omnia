@@ -35,7 +35,7 @@ To modify how data is collected from the cluster, modify the variables in ``omni
 * To start or stop the collection of regular metrics, health check metrics, or GPU metrics, update the values of ``collect_regular_metrics``, ``collect_health_check_metrics``, or ``collect_gpu_metrics``. For a list of all metrics collected, `click here <TelemetryMetrics.html>`_.
 
 .. note::
-    * Currently, changing the ``grafana_username`` and ``grafana_password`` values is not supported via ``telemetry.yml``. 
+    * Currently, changing the ``grafana_username`` and ``grafana_password`` values is not supported via ``telemetry.yml``.
     * The passed inventory should have an idrac group, if ``idrac_telemetry_support`` is true.
     * If ``omnia_telemetry_support`` is true, then the inventory should have manager and compute groups along with optional login group.
     * Rocky 8.7 is not compatible with the Kubernetes installed by ``telemetry.yml`` due to known issues with cri-o. For more information, `click here <https://github.com/cri-o/cri-o/issues/6197>`_.
