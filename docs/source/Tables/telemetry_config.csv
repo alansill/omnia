@@ -7,7 +7,9 @@ Required	","* Enables iDRAC telemetry support and visualizations.
 * **Values:** 
 	* ``false`` <- **Default**
 
-	* ``true``"
+	* ``true``
+
+.. note:: When ``idrac_telemetry_support`` is ``true``, ``mysqldb_user``, ``mysqldb_password`` and ``mysqldb_root_password`` become mandatory. "
 "**omnia_telemetry_support**
 
 ``boolean``
@@ -30,7 +32,9 @@ Required	","* Enables visualizations.
 * **Values:** 
 	* ``false`` <- **Default**
 
-	* ``true``"
+	* ``true``
+
+.. note:: When ``visualization_support`` is true, ``grafana_username`` and ``grafana_password`` become mandatory."
 "**appliance_k8s_pod_net_cidr**
 
 ``string``
