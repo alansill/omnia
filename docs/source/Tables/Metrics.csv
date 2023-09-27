@@ -1,98 +1,97 @@
 ﻿Metric Type,Metric Name,Error value,Potential cause(s),Command
 Regular Metric,BlockedProcesses,No Data,"* ``/proc/stat`` file is inaccessible.
-* OMNIA telemetry service encounters an exception while retrieving information.",grep procs_blocked /proc/stat
+* OMNIA telemetry service encounters an exception while retrieving information.",``grep procs_blocked /proc/stat``
 Regular Metric,CPUSystem,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.cpu_times().system
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.cpu_times().system``
 Regular Metric,CPUWait,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.cpu_times().iowait
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.cpu_times().iowait``
 Regular Metric,ErrorsRecv,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.net_io_counters(pernic=True).get(interface_name).errin
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.net_io_counters(pernic=True).get(interface_name).errin``
 Regular Metric,ErrorsSent,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.net_io_counters(pernic=True).get(interface_name).errout
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.net_io_counters(pernic=True).get(interface_name).errout``
 Regular Metric,HardwareCorruptedMemory,No Data,"* The ``/proc/meminfo`` file is inaccessible.
-* OMNIA telemetry service encounters an exception while retrieving information.",grep HardwareCorrupted /proc/meminfo
+* OMNIA telemetry service encounters an exception while retrieving information.",``grep HardwareCorrupted /proc/meminfo``
 Regular Metric,MemoryFree,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.virtual_memory().free
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().free``
 Regular Metric,MemoryTotal,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.virtual_memory().total
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().total``
 Regular Metric,MemoryAvailable,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.virtual_memory().available
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().available``
 Regular Metric,MemoryPercent,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.virtual_memory().percent
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().percent``
 Regular Metric,MemoryUsed,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.virtual_memory().used
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().used``
 Regular Metric,MemoryActive,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.virtual_memory().active
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().active``
 Regular Metric,MemoryInactive,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.virtual_memory().inactive
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().inactive``
 Regular Metric,MemoryCached,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.virtual_memory().cached
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().cached``
 Regular Metric,MemoryShared,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",psutil.virtual_memory().shared
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().shared``
 Regular Metric,NodesTotal,No Data,"* Slurm is not installed.
-* OMNIA telemetry service encounters an exception while retrieving information.    ",sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m
+* OMNIA telemetry service encounters an exception while retrieving information.    ",``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``
 Regular Metric,NodesUp,No Data,"* Slurm is not installed.
-* OMNIA telemetry service encounters an exception while retrieving information.    ",sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m
+* OMNIA telemetry service encounters an exception while retrieving information.    ",``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``
 Regular Metric,NodesDown,No Data,"* Slurm is not installed.
-* OMNIA telemetry service encounters an exception while retrieving information.    ",sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m
+* OMNIA telemetry service encounters an exception while retrieving information.    ",``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``
 Regular Metric,QueuedJobs,No Data,"* Slurm is not installed.
-* OMNIA telemetry service encounters an exception while retrieving information.    ",squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N
+* OMNIA telemetry service encounters an exception while retrieving information.    ",``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``
 Regular Metric,RunningJobs,No Data,"* Slurm is not installed.
-* OMNIA telemetry service encounters an exception while retrieving information.    ",squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N
+* OMNIA telemetry service encounters an exception while retrieving information.    ",``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``
 Regular Metric,FailedJobs,No Data,"* Slurm is not installed.
-* OMNIA telemetry service encounters an exception while retrieving information.    ",sacct -P --delimiter=\t
+* OMNIA telemetry service encounters an exception while retrieving information.    ",``sacct -P --delimiter=\t``
 Regular Metric,SMARTHDATemp,No Data,"* smartctl commands failed.
-* OMNIA telemetry service encounters an exception while retrieving information. ",smartctl -a hda
-Regular Metric,UniqueUserLogin,No Data,* OMNIA telemetry service encounters an exception while retrieving information. ,"who|cut -f 1 -d "" ""|sort -u|wc -l"
+* OMNIA telemetry service encounters an exception while retrieving information. ",``smartctl -a hda``
+Regular Metric,UniqueUserLogin,No Data,* OMNIA telemetry service encounters an exception while retrieving information. ,"``who|cut -f 1 -d "" ""|sort -u|wc -l``"
 Health Check Metric,Dmesg,Unknown/fail,"* [Unknown]OMNIA telemetry service encounters an exception while retrieving information. 
 * [Unknown] The dmesg command was not found on the cluster node.
-* [Fail] The dmesg command returned an error.",dmesg --level=err
+* [Fail] The dmesg command returned an error.",``dmesg --level=err``
 Health Check Metric,Beegfs client Reachable,Unknown/fail,"* [Unknown]OMNIA telemetry service encounters an exception while retrieving information.
 * [Unknown] BeeGFS is not installed or inactive.  
-* [Fail] The BeeGFS client service has failed or the node is not present in reachable lists of BeeGFS clients.","systemctl is-active beegfs-client
-beegfs-ctl --nodetype=client --listnodes
-"
+* [Fail] The BeeGFS client service has failed or the node is not present in reachable lists of BeeGFS clients.","``systemctl is-active beegfs-client``
+``beegfs-ctl --nodetype=client --listnodes``"
 Health Check Metric,gpu_driver_health:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: nvidia-smi --query-gpu=driver_version --format=csv,nounits
-For AMD GPU: rocm-smi --showdriverversion --csv"
+* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi --query-gpu=driver_version --format=csv,nounits``
+For AMD GPU: ``rocm-smi --showdriverversion --csv``"
 Health Check Metric,gpu_health_nvlink:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ",NVIDIA: nvidia-smi nvlink --status
+* OMNIA telemetry service encountered an exception.               ",NVIDIA: ``nvidia-smi nvlink --status``
 Health Check Metric,gpu_health_pcie:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits 
-For AMD GPU: rocm-smi --showbus --csv"
+* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits``
+For AMD GPU: ``rocm-smi --showbus --csv``"
 Health Check Metric,gpu_health_pmu:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: nvidia-smi --query-gpu=power.management --format=csv,nounits"
+* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi --query-gpu=power.management --format=csv,nounits``"
 Health Check Metric,gpu_health_power:gpu,Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: nvidia-smi --query-gpu=power.limit,power.draw --format=csv,nounits
-For AMD GPU: rocm-smi -P -M --csv"
-Health Check Metric,gpu_health_thermal  ,Unknown,"* AMD/NVIDIA  accelerators are not present.
+* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi --query-gpu=power.limit,power.draw --format=csv,nounits``
+For AMD GPU: ``rocm-smi -P -M --csv``"
+Health Check Metric,gpu_health_thermal,Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits
-For AMD GPU: rocm-smi -t --csv"
+* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits``
+For AMD GPU: ``rocm-smi -t --csv``"
 Health Check Metric,Kubernetespodsstatus,Unknown,"* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception.",sudo kubectl get pods -A -o json
+* OMNIA telemetry service encountered an exception.",``sudo kubectl get pods -A -o json``
 Health Check Metric,Kuberneteschildnode,Unknown,"* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception.",sudo kubectl get nodes -o json
+* OMNIA telemetry service encountered an exception.",``sudo kubectl get nodes -o json``
 Health Check Metric,kubernetesnodesstatus,Unknown,"* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception.",sudo kubectl get nodes -o json
+* OMNIA telemetry service encountered an exception.",``sudo kubectl get nodes -o json``
 Health Check Metric,kubernetescomponentsstatus,Unknown,"* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception.",sudo kubectl get --raw=/livez?verbose
+* OMNIA telemetry service encountered an exception.",``sudo kubectl get --raw=/livez?verbose``
 Health Check Metric,Smart,Unknown,"* smartctl commands failed.
-* OMNIA telemetry service encounters an exception while retrieving information. ",smartctl -a hda
+* OMNIA telemetry service encounters an exception while retrieving information. ",``smartctl -a hda``
 GPU Metric,gpu_temperature:gpu,No Data,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits
-For AMD GPU: rocm-smi -t --csv"
+* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits``
+For AMD GPU: ``rocm-smi -t --csv``"
 GPU Metric,gpu_utilization:,No Data,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits
-For AMD GPU: rocm-smi -u --csv"
-GPU Metric,gpu_utilization:average ,No Data,"* AMD/NVIDIA  accelerators are not present.
+* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits``
+For AMD GPU: ``rocm-smi -u --csv``"
+GPU Metric,gpu_utilization:average,No Data,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits
-For AMD GPU: rocm-smi -u --csv"
+* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits``
+For AMD GPU: ``rocm-smi -u --csv``"
