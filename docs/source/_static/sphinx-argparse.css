@@ -7,5 +7,8 @@
     color: white;
 }
 .wy-table-responsive {
+    display: block;
+    width: 100%;
     overflow: visible !important;
+    max-width: 500px;
 }
