@@ -226,6 +226,15 @@ To enable routing, update the ``primary_dns`` and ``secondary_dns`` in ``provisi
 
 * PXE boot the target server.
 
+⦾ **Why does the task: 'BeeGFS: Rebuilding BeeGFS client module' fail?**
+
+.. image:: ../images/Metallb_Telemetry_Apptainer_fail.png
+
+**Potential Cause**: ``/var`` partition is full (potentially due to images not being cleared after intel-oneapi images docker images are used to execute benchmarks on the cluster using apptainer support) .
+
+**Resolution**: Clear the ``/var`` partition and retry ``telemetry.yml``.
+
+
 ⦾ **Is Disabling 2FA supported by Omnia?**
 
 * Disabling 2FA is not supported by Omnia and must be manually disabled.
