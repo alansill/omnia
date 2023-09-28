@@ -6,11 +6,11 @@ Connecting to internal databases
 * TimescaleDB
     * Go inside the pod: ``kubectl exec -it pod/timescaledb-0 -n telemetry-and-visualizations -- /bin/bash``
     * Connect to psql: ``psql -U <postgres_username>``
-    * Connect to database: ``< timescaledb_name >``
+    * Connect to database: ``telemetry_metrics``
 * MySQL DB
     * Go inside the pod: ``kubectl exec -it pod/mysqldb-n telemetry-and-visualizations -- /bin/bash``
     * Connect to psql: ``psql -U <mysqldb_username> -p <mysqldb_password>``
-    * Connect to database: ``USE <mysqldb_name>``
+    * Connect to database: ``USE idrac_telemetrysource_services_db``
 
 Checking and updating encrypted parameters
 -----------------------------------------------
