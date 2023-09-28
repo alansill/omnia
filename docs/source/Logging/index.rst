@@ -2,7 +2,7 @@ Logging
 =========
 
 Control plane logs
----------------------------
+-------------------
 
 All log files can be viewed via CLI. Alternatively, most log files can be viewed via the Dashboard tab ( |Dashboard| ) on the grafana UI.
 
@@ -25,6 +25,33 @@ Provisioning logs
 Logs pertaining to actions taken during ``provision.yml``  can be viewed in ``/var/log/xcat/cluster.log`` and ``/var/log/xcat/computes.log`` on the control plane.
 
 .. note::  As long as a node has been added to a cluster by Omnia, deployment events taking place on the node will be updated in ``/var/log/xcat/cluster.log``.
+
+Log management
+----------------
+
+Use ``/etc/logrotate.conf`` to customize how often logs are rotated. By default, the ``logrotate.conf`` file: ::
+
+    [root@orchidcp xcat]# cat /etc/logrotate.conf
+    # see "man logrotate" for details
+    # rotate log files weekly
+    weekly
+    # keep 4 weeks worth of backlogs
+    rotate 4
+    # create new (empty) log files after rotating old ones
+    create
+    # use date as a suffix of the rotated file
+    dateext
+    # uncomment this if you want your log files compressed
+    #compress
+    # RPM packages drop log rotation information into this directory
+    include /etc/logrotate.d
+    # system-specific logs may be also be configured here.
+
+With the above settings:
+* Logs are backed up weekly.
+* Data upto 4 weeks old is backed up. Any log backup created before that will be deleted.
+
+.. caution:: Since these logs take up ``/var`` space, sufficient space must be allocated to ``/var`` partition if being created. If ``/var`` partition space fills up, control plane might crash.
 
 Logs of individual containers
 -------------------------------

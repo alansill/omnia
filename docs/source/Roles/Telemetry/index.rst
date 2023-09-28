@@ -18,9 +18,12 @@ Optionally, you can initiate only telemetry using the below command: ::
 
     ansible-playbook telemetry.yml -i inventory
 
-.. note:: Depending on the type of telemetry initiated, the following groups are required. :
-    omnia_telemetry: manager, compute
-    idrac_telemetry: idrac
+.. note::
+
+    * Depending on the type of telemetry initiated, the following groups are required:
+        * omnia_telemetry: manager, compute
+        * idrac_telemetry: idrac
+    * If you would like a local backup of the timescaleDB used to store telemetry data, `click here <../Utils/timescaledb_utility.html>`_.
 
 After initiation, new iDRACs can be added for ``idrac_telemetry`` acquisition by running the following commands: ::
 
@@ -120,8 +123,10 @@ Ex: ::
 If ``idrac_telemetry_support`` and ``visualisation_support`` is set to true, Parallel Coordinate graphs can be used to view system statistics.
 
 .. toctree::
-    TelemetryMetrics
     Visualizations/index
+    TelemetryMetrics
+    TimescaleDB
+
 
 
 
