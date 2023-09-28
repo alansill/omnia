@@ -226,7 +226,7 @@ To enable routing, update the ``primary_dns`` and ``secondary_dns`` in ``provisi
 
 * PXE boot the target server.
 
-⦾ **Why does the task: 'BeeGFS: Rebuilding BeeGFS client module' fail?**
+⦾ **Why does the task: 'Orchestrator: Deploy MetalLB IP Address pool' fail?**
 
 .. image:: ../images/Metallb_Telemetry_Apptainer_fail.png
 
