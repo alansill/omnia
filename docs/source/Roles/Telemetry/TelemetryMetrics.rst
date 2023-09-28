@@ -1,4 +1,4 @@
-Using telemetry information to diagnose node issues
+Using telemetry information to diagnose errors
 ----------------------------------------------------
 .. csv-table:: Telemetry metrics
    :file: ../../Tables/Metrics.csv

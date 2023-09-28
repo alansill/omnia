@@ -156,7 +156,7 @@ Required	","* This variable is used to enable metric collection related to GPU.
 ``integer``
 
 Required	","* This variable is used to set an appropriate time interval in seconds for all cluster nodes so that they do not congest the admin network.
-* A random number between 0 and ``fuzzy_offset`` gets added with ``omnia_telemetry_collection_interval`` value to decide individual cluster node's telemetry data collection interval.
+* Individual nodes generate a random number between 0 and ``fuzzy_offset`` and telemetry data collection of that node initially waits for that much of second before starting data collection.
 * **Default value (seconds)**: 60
 * For large clusters, a higher value is recommended.
 * This value should be less than or equal to the value of ``omnia_telemetry_collection_interval`` but greater than or equal to 60."

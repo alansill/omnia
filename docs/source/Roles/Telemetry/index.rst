@@ -20,9 +20,12 @@ Optionally, you can initiate only telemetry using the below command: ::
 
 .. note::
 
-    * Depending on the type of telemetry initiated, the following groups are required:
-        * omnia_telemetry: manager, compute
+    * Depending on the type of telemetry initiated, include the following groups in the inventory:
+
+        * omnia_telemetry: manager, compute, [optional] login
+
         * idrac_telemetry: idrac
+
     * If you would like a local backup of the timescaleDB used to store telemetry data, `click here <../Utils/timescaledb_utility.html>`_.
 
 After initiation, new iDRACs can be added for ``idrac_telemetry`` acquisition by running the following commands: ::

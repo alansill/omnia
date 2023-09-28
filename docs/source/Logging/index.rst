@@ -31,7 +31,7 @@ Log management
 
 Use ``/etc/logrotate.conf`` to customize how often logs are rotated. By default, the ``logrotate.conf`` file: ::
 
-    [root@orchidcp xcat]# cat /etc/logrotate.conf
+    cat /etc/logrotate.conf
     # see "man logrotate" for details
     # rotate log files weekly
     weekly
