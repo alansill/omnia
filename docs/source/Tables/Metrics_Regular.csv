@@ -9,38 +9,38 @@ ErrorsRecv,No Data,"* The ``psutil`` library encountered errors.
 * OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.net_io_counters(pernic=True).get(interface_name).errin``
 ErrorsSent,No Data,"* The ``psutil`` library encountered errors.
 * OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.net_io_counters(pernic=True).get(interface_name).errout``
+FailedJobs,No Data,"* Slurm is not installed.
+* OMNIA telemetry service encounters an exception while retrieving information.    ",``sacct -P --delimiter=\t``
 HardwareCorruptedMemory,No Data,"* The ``/proc/meminfo`` file is inaccessible.
 * OMNIA telemetry service encounters an exception while retrieving information.",``grep HardwareCorrupted /proc/meminfo``
-MemoryFree,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().free``
-MemoryTotal,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().total``
-MemoryAvailable,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().available``
-MemoryPercent,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().percent``
-MemoryUsed,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().used``
 MemoryActive,No Data,"* The ``psutil`` library encountered errors.
 * OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().active``
-MemoryInactive,No Data,"* The ``psutil`` library encountered errors.
-* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().inactive``
+MemoryAvailable,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().available``
 MemoryCached,No Data,"* The ``psutil`` library encountered errors.
 * OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().cached``
+MemoryFree,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().free``
+MemoryInactive,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().inactive``
+MemoryPercent,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().percent``
 MemoryShared,No Data,"* The ``psutil`` library encountered errors.
 * OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().shared``
+MemoryTotal,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().total``
+MemoryUsed,No Data,"* The ``psutil`` library encountered errors.
+* OMNIA telemetry service encounters an exception while retrieving information. ",``psutil.virtual_memory().used``
+NodesDown,No Data,"* Slurm is not installed.
+* OMNIA telemetry service encounters an exception while retrieving information.    ",``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``
 NodesTotal,No Data,"* Slurm is not installed.
 * OMNIA telemetry service encounters an exception while retrieving information.    ",``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``
 NodesUp,No Data,"* Slurm is not installed.
-* OMNIA telemetry service encounters an exception while retrieving information.    ",``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``
-NodesDown,No Data,"* Slurm is not installed.
 * OMNIA telemetry service encounters an exception while retrieving information.    ",``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``
 QueuedJobs,No Data,"* Slurm is not installed.
 * OMNIA telemetry service encounters an exception while retrieving information.    ",``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``
 RunningJobs,No Data,"* Slurm is not installed.
 * OMNIA telemetry service encounters an exception while retrieving information.    ",``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``
-FailedJobs,No Data,"* Slurm is not installed.
-* OMNIA telemetry service encounters an exception while retrieving information.    ",``sacct -P --delimiter=\t``
 SMARTHDATemp,No Data,"* smartctl commands failed.
 * OMNIA telemetry service encounters an exception while retrieving information. ",``smartctl -a hda``
 UniqueUserLogin,No Data,* OMNIA telemetry service encounters an exception while retrieving information. ,"``who|cut -f 1 -d "" ""|sort -u|wc -l``"
