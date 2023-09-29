@@ -1,6 +1,6 @@
 Parameter,Details
 "freeipa_required
-     ``boolean``
+     ``boolean``  [1]_
      Required   ","Boolean indicating whether FreeIPA is required or not.
                                                       
      Choices:                                         

@@ -169,7 +169,7 @@ Required","* If provided, Omnia will assign static IPs to IB NICs on the cluster
 "
 "**update_repos**
 
-``boolean``
+``boolean``  [1]_
 
 Required","* Indicates whether ``provision.yml`` will update offline RHEL repos.          
                                                                                                                                                                                                                                                                        
@@ -185,7 +185,7 @@ Choices:
 
 ``true``    "
 " **rhel_repo_alphabetical_folders**
- ``boolean``
+ ``boolean``  [1]_
  
  Required   ","* Indicates whether the packages in local or subscription repos should be ordered in alphabetical directories.
                                                                                                               
@@ -257,7 +257,7 @@ Optional",Absolute path to a  local copy of the .iso file containing Mellanox OF
 Optional","Absolute path to local copy of .rpm file containing CUDA packages. The cuda rpm can be downloaded from https://developer.nvidia.com/cuda-downloads. CUDA will be installed post provisioning without any user intervention. Eg: cuda_toolkit_path: ""/root/cuda-repo-rhel8-12-0-local-12.0.0_525.60.13-1.x86_64.rpm"""
 "**apptainer_support**
 
-``boolean``
+``boolean``  [1]_
 
 Required","* Indicates whether apptainer will be installed on the cluster to enable execution of HPC benchmarks in a containeraized environment.
 * If ``apptainer_support``: false, apptainer will not be installed on the cluster.

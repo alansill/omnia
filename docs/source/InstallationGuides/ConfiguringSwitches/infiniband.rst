@@ -14,7 +14,7 @@ Input the configuration variables into the ``network/infiniband_edr_input.yml``,
 | Parameters              | Details                                                                                                                                                                |
 +=========================+========================================================================================================================================================================+
 | enable_split_port       | Indicates whether ports are to be split.                                                                                                                               |
-|      ``boolean``        |                                                                                                                                                                        |
+|      ``boolean``  [1]_  |                                                                                                                                                                        |
 |      Required           |      Choices:                                                                                                                                                          |
 |                         |                                                                                                                                                                        |
 |                         |      * ``false`` <- default                                                                                                                                            |
@@ -49,12 +49,13 @@ Input the configuration variables into the ``network/infiniband_edr_input.yml``,
 |      Optional           |      **Default values**: ``"no shutdown"``                                                                                                                             |
 +-------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | save_changes_to_startup | Indicates whether the switch configuration is to persist across   reboots.                                                                                             |
-|      ``boolean``        |      Choices:                                                                                                                                                          |
+|      ``boolean`` [1]_   |      Choices:                                                                                                                                                          |
 |      Optional           |                                                                                                                                                                        |
 |                         |      * ``false`` <- default                                                                                                                                            |
 |                         |      * ``true``                                                                                                                                                        |
 +-------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+.. [1] Boolean parameters do not need to be passed with double or single quotes.
 
 **Before you run the playbook**
 

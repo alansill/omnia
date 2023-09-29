@@ -13,7 +13,7 @@ Required	","* Enables iDRAC telemetry support and visualizations.
 .. note:: When ``idrac_telemetry_support`` is ``true``, ``mysqldb_user``, ``mysqldb_password`` and ``mysqldb_root_password`` become mandatory. "
 "**omnia_telemetry_support**
 
-``boolean``
+``boolean``  [1]_
 
 Required	","* Starts or stops Omnia telemetry
 
@@ -28,7 +28,7 @@ Required	","* Starts or stops Omnia telemetry
 	* ``true``"
 "**visualization_support**
 
-``boolean``
+``boolean``  [1]_
 
 Required	","* Enables visualizations. 
 * **Values:** 
@@ -128,7 +128,7 @@ Required	","* This variable denotes the time interval (seconds) of telemetry dat
 * **Default value:** 300"
 "**collect_regular_metrics**
 
-``boolean``
+``boolean``  [1]_
 
 Required	","* This variable is used to enable metric collection part of the regular metric group.
 * For a list of regular metrics collected, click here. <TelemetryMetrics.html#regular-metrics>
@@ -138,7 +138,7 @@ Required	","* This variable is used to enable metric collection part of the regu
 	* ``false``"
 "**collect_health_check_metrics**
 
-``boolean``
+``boolean``  [1]_
 
 Required	","* This variable is used to enable metric collection part of the health check metric group.
 * For a list of regular metrics collected, click here. <TelemetryMetrics.html#health-metrics>
@@ -148,7 +148,7 @@ Required	","* This variable is used to enable metric collection part of the heal
 	* ``false``"
 "**collect_gpu_metrics**
 
-``boolean``
+``boolean``  [1]_
 
 Required	","* This variable is used to enable metric collection related to GPU.
 

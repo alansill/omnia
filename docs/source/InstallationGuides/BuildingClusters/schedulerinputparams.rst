@@ -29,6 +29,7 @@ These parameters are located in ``input/omnia_config.yml``, ``input/security_con
    :header-rows: 1
    :keepspace:
 
+
 **storage_config.yml**
 
 
@@ -80,7 +81,7 @@ These parameters are located in ``input/omnia_config.yml``, ``input/security_con
 |      Optional                   |                                                                                                                                                                                                                                                      |
 +---------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | beegfs_unmount_client           | Changing this value to true will unmount running instance of BeeGFS   client and should only be used when decommisioning BeeGFS, changing the mount   location or changing the BeeGFS version.                                                       |
-|      ``boolean``                |                                                                                                                                                                                                                                                      |
+|      ``boolean``  [1]_          |                                                                                                                                                                                                                                                      |
 |      Optional                   | Choices:                                                                                                                                                                                                                                             |
 |                                 |                                                                                                                                                                                                                                                      |
 |                                 |      * ``false`` <- Default                                                                                                                                                                                                                          |
@@ -92,7 +93,7 @@ These parameters are located in ``input/omnia_config.yml``, ``input/security_con
 |      Optional                   |      **Default value**: 7.2.6                                                                                                                                                                                                                        |
 +---------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | beegfs_version_change           | Use this variable to change the BeeGFS version on the target nodes.                                                                                                                                                                                  |
-|      ``boolean``                |                                                                                                                                                                                                                                                      |
+|      ``boolean`` [1]_           |                                                                                                                                                                                                                                                      |
 |      Optional                   | Choices:                                                                                                                                                                                                                                             |
 |                                 |                                                                                                                                                                                                                                                      |
 |                                 |      * ``false`` <- Default                                                                                                                                                                                                                          |
@@ -113,7 +114,7 @@ These parameters are located in ``input/omnia_config.yml``, ``input/security_con
    :header-rows: 1
    :keepspace:
 
-
+.. [1] Boolean parameters do not need to be passed with double or single quotes.
 
 Click here for more information on `FreeIPA, LDAP <Authentication.html>`_, `Telemetry <../../Roles/Telemetry/index.html>`_, `BeeGFS <BeeGFS.html>`_ or, `NFS <NFS.html>`_.
 

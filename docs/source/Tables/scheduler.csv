@@ -73,7 +73,7 @@
      **Default values**: ``/etc/ansible``                                           "
 "**enable_omnia_nfs**
 
-     ``boolean``
+     ``boolean``  [1]_
 
      Required      ","* Boolean indicating whether a parallel file system is **not** running in the environment and a share file system (NFS/BeeGFS) will be used to create home directory/ Kubernetes share directory on it.
 

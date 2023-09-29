@@ -29,6 +29,8 @@ The following parameters need to be populated in ``input/provision_config.yml`` 
    :file: ../../../Tables/mapping.csv
    :header-rows: 1
 
+.. [1] Boolean parameters do not need to be passed with double or single quotes.
+
 .. caution:: The IP address *192.168.25.x* is used for PowerVault Storage communications. Therefore, do not use this IP address for other configurations.
 
 .. note::
