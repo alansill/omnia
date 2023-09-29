@@ -10,6 +10,8 @@ To initiate telemetry support, fill out the following parameters in ``omnia/inpu
    :header-rows: 1
    :keepspace:
 
+.. [1] Boolean parameters do not need to be passed with double or single quotes. 
+
 Once you have executed ``provision.yml`` and has also provisioned the cluster, initiate telemetry on the cluster as part of ``omnia.yml``, which configures the cluster with scheduler, storage and authentication using the below command. ::
 
     ansible-playbook omnia.yml -i inventory

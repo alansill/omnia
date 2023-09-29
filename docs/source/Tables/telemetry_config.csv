@@ -1,10 +1,11 @@
 "Parameter	",Details
 "**idrac_telemetry_support**
 
-``boolean``
+``boolean`` [1]_
 
 Required	","* Enables iDRAC telemetry support and visualizations. 
 * **Values:** 
+
 	* ``false`` <- **Default**
 
 	* ``true``
@@ -21,6 +22,7 @@ Required	","* Starts or stops Omnia telemetry
 * If omnia_telemetry_support is false, telemetry acquisition will be stopped.
 
 * **Values:** 
+
 	* ``false`` <- **Default**
 
 	* ``true``"
@@ -129,7 +131,8 @@ Required	","* This variable denotes the time interval (seconds) of telemetry dat
 ``boolean``
 
 Required	","* This variable is used to enable metric collection part of the regular metric group.
-* **Values:** 
+* For a list of regular metrics collected, click here. <TelemetryMetrics.html#regular-metrics>
+* **Values:**
 	* ``true`` <- **Default**
 
 	* ``false``"
@@ -137,7 +140,8 @@ Required	","* This variable is used to enable metric collection part of the regu
 
 ``boolean``
 
-Required	","* This variable is used to enable metric collection part of the health check metric group
+Required	","* This variable is used to enable metric collection part of the health check metric group.
+* For a list of regular metrics collected, click here. <TelemetryMetrics.html#health-metrics>
 * **Values:** 
 	* ``true`` <- **Default**
 
@@ -147,7 +151,8 @@ Required	","* This variable is used to enable metric collection part of the heal
 ``boolean``
 
 Required	","* This variable is used to enable metric collection related to GPU.
-* **Values:** 
+
+* **Values:**
 	* ``true`` <- **Default**
 
 	* ``false``"
