@@ -8,9 +8,8 @@
 }
 .wy-table-responsive {
     display: block;
+    width: fit-content;
+    block-size: fit-content;
     overflow: visible !important;
     max-width: 800px;
-}
-.wy-nav-content {
-    max-width: none;
 }
