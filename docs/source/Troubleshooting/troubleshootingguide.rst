@@ -8,7 +8,7 @@ Connecting to internal databases
     * Connect to psql: ``psql -U <postgres_username>``
     * Connect to database: ``telemetry_metrics``
 * MySQL DB
-    * Go inside the pod: ``kubectl exec -it pod/mysqldb-n telemetry-and-visualizations -- /bin/bash``
+    * Go inside the pod: ``kubectl exec -it pod/mysqldb -n telemetry-and-visualizations -- /bin/bash``
     * Connect to psql: ``psql -U <mysqldb_username> -p <mysqldb_password>``
     * Connect to database: ``USE idrac_telemetrysource_services_db``
 
