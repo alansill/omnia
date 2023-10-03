@@ -35,10 +35,25 @@ Checking pod status on the control plane
 
 Using telemetry information to diagnose node issues
 ----------------------------------------------------
-.. csv-table:: Telemetry metrics
-   :file: ../Tables/Metrics.csv
+
+.. csv-table:: Regular telemetry metrics
+   :file: ../Tables/Metrics_Regular.csv
    :header-rows: 1
    :keepspace:
+
+
+.. csv-table:: Health telemetry metrics
+   :file: ../Tables/Metrics_Health.csv
+   :header-rows: 1
+   :keepspace:
+
+
+.. csv-table:: GPU telemetry metrics
+   :file: ../Tables/Metrics_GPU.csv
+   :header-rows: 1
+   :keepspace:
+
+
 
 .. |Dashboard| image:: ../images/Visualization/DashBoardIcon.png
     :height: 25px
