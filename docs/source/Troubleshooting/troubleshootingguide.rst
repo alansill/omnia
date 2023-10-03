@@ -23,10 +23,9 @@ Checking and updating encrypted parameters
 
    ansible-vault view provision_config.yml --vault-password-file .provision_vault_key
 
-  3. To edit the encrypted parameters: ::
+3. To edit the encrypted parameters: ::
 
     ansible-vault edit provision_config.yml --vault-password-file .provision_vault_key
-
 
 Checking pod status on the control plane
 --------------------------------------------
