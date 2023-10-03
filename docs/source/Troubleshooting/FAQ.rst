@@ -235,6 +235,13 @@ To enable routing, update the ``primary_dns`` and ``secondary_dns`` in ``provisi
 **Resolution**: Clear the ``/var`` partition and retry ``telemetry.yml``.
 
 
+⦾ **Why does the task: [Telemetry]: TASK [grafana : Wait for grafana pod to come to ready state] fail with a timeout error?**
+
+**Potential Cause**: Docker pull limit exceeded.
+
+**Resolution**: Manually input the username and password to your docker account on the control plane.
+
+
 ⦾ **Is Disabling 2FA supported by Omnia?**
 
 * Disabling 2FA is not supported by Omnia and must be manually disabled.
