@@ -38,5 +38,3 @@ kubernetescomponentsstatus,``sudo kubectl get --raw=/livez?verbose``,Unknown,"* 
 * OMNIA telemetry service encountered an exception.","Value is Pass when healthz check is passed in ""kubectl get --raw=/livez?verbose"" command , otherwise fail.",Cluster Level
 Smart,``smartctl -a hda``,Unknown,"* smartctl commands failed.
 * OMNIA telemetry service encounters an exception while retrieving information. ",,Node Level
-,,,,,
-,,,,,
