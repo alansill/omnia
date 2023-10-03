@@ -36,6 +36,7 @@ The following parameters need to be populated in ``input/provision_config.yml`` 
 .. note::
 
     The ``input/provision_config.yml`` file is encrypted on the first run of the provision tool:
+
         To view the encrypted parameters: ::
 
             ansible-vault view provision_config.yml --vault-password-file .provision_vault_key

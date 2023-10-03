@@ -1,4 +1,4 @@
-Metric Name,Error value,Potential cause(s),Command
+Metric Name,Error value(s),Potential cause(s),Command
 BlockedProcesses,No Data,"* ``/proc/stat`` file is inaccessible.
 * OMNIA telemetry service encounters an exception while retrieving information.",``grep procs_blocked /proc/stat``
 CPUSystem,No Data,"* The ``psutil`` library encountered errors.

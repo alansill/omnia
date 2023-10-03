@@ -1,4 +1,4 @@
-Metric Name,Error value,Potential cause(s),Command
+Metric Name,Error value(s),Potential cause(s),Command
 Dmesg,Unknown/fail,"* [Unknown]OMNIA telemetry service encounters an exception while retrieving information. 
 * [Unknown] The dmesg command was not found on the cluster node.
 * [Fail] The dmesg command returned an error.",``dmesg --level=err``
