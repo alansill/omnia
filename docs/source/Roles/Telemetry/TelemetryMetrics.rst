@@ -9,6 +9,8 @@ Regular metrics
    :header-rows: 1
    :keepspace:
 
+.. [1] This metric is collected from the manager node if a login node is absent.
+
 Health metrics
 ---------------
 
