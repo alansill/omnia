@@ -9,7 +9,8 @@ ErrorsRecv,``psutil.net_io_counters(pernic=True).get(interface_name).errin``,Met
 * OMNIA telemetry service encounters an exception in retrieving the information.",Error packets received for Individual network interfaces will be populated,Node
 ErrorsSent,``psutil.net_io_counters(pernic=True).get(interface_name).errout``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",Error packets sent for Individual network interfaces will be populated,Node
-FailedJobs,``sacct -P --delimiter=\t``,Metric Value/ No Data,* When Slurm is not installed.                                                                      * OMNIA telemetry service encounters an exception in retrieving the information,,Cluster
+FailedJobs,``sacct -P --delimiter=\t``,Metric Value/ No Data,"* When Slurm is not installed.
+* OMNIA telemetry service encounters an exception in retrieving the information",,Cluster
 HardwareCorruptedMemory (kB),``grep HardwareCorrupted /proc/meminfo``,Metric Value/ No Data,"* This could happen if the ``/proc/meminfo`` file is inaccessible.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
 MemoryActive (Bytes),``psutil.virtual_memory().active``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
