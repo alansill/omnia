@@ -83,7 +83,7 @@ Loki log collections and telemetry/kubernetes dashboards can viewed on the explo
 Datasources configured by Omnia can be viewed as seen below.
 
 
-.. image:: ../../images/Grafana_DataSources.png
+.. image:: ../../images/GrafanaDataSources.png
 
 **To use Loki for log filtering**
 
