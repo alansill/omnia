@@ -107,7 +107,7 @@ Ex: ::
 
     ii. In the Explore page, select **telemetry-postgres**.
 
-    .. image:: ../../images/Grafana_ControlPlaneLoki.png
+    .. image:: ../../images/Grafana_Telemetry_PostGRES.png
 
     iii. The query builder allows you to create SQL commands that can be used to query the ``omnia_telemetry.metrics`` table. Filter the data required using the following fields:
 
