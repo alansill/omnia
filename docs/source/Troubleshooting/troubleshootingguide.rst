@@ -6,7 +6,7 @@ Connecting to internal databases
 * TimescaleDB
     * Go inside the pod: ``kubectl exec -it pod/timescaledb-0 -n telemetry-and-visualizations -- /bin/bash``
     * Connect to psql: ``psql -U <postgres_username>``
-    * Connect to database: ``telemetry_metrics``
+    * Connect to database: ``\c telemetry_metrics``
 * MySQL DB
     * Go inside the pod: ``kubectl exec -it pod/mysqldb -n telemetry-and-visualizations -- /bin/bash``
     * Connect to psql: ``psql -U <mysqldb_username> -p <mysqldb_password>``

@@ -17,6 +17,7 @@
 * The password must not contain -,\, ',""          
 * The length of the password should be at least 8.
 * Required when ``scheduler_type: ""slurm""``.
+* The first character of the string should be an alphabet.
 
      **Default value**: ``""password""``           "
 "**k8s_version**
@@ -61,7 +62,8 @@
      ``string``
 
      Optional  ","* Password for Dockerhub account                        
-* This value is mandatory if docker username is provided"
+* This value is mandatory if docker username is provided
+* The first character of the string should be an alphabet."
 "**ansible_config_file_path**
 
      ``string``

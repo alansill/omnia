@@ -45,13 +45,15 @@
 
      Optional  ","* Username for Dockerhub account
 * A kubernetes secret will be created and patched to service account in   default namespace. This kubernetes secret can be used to pull images from   private repositories
-* This value is optional but suggested avoiding docker pull limit issues                                                                                                  "
+* This value is optional but suggested avoiding docker pull limit issues.
+* The first character of the string should be an alphabet."
 "**docker_password**
 
      ``string``
 
      Optional  ","* Password for Dockerhub account                        
-* This value is mandatory if docker username is provided"
+* This value is mandatory if docker username is provided.
+* The first character of the string should be an alphabet."
 "**ansible_config_file_path**
 
      ``string``

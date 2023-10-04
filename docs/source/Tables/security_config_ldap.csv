@@ -37,7 +37,8 @@
      **Default values**: ``admin``                                                                                                                                                                                                                         "
 "ldap_bind_password
      ``string``   
-     Optional     ",If LDAP server is configured with bind dn then bind dn password to be   provided. If this value is not provided (when bind is configured in server)   then ldap authentication fails. Omnia does not validate this input. Ensure   that it is valid and proper.
+     Optional     ","* If LDAP server is configured with bind dn then bind dn password to be   provided. If this value is not provided (when bind is configured in server)   then ldap authentication fails. Omnia does not validate this input. Ensure   that it is valid and proper.
+* The first character of the string should be an alphabet."
 "enable_secure_login_node
      ``boolean``  [1]_
      Optional           ","Boolean value deciding whether security features are enabled on the Login   Node.

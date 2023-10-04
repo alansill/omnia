@@ -17,6 +17,7 @@
 * The password must not contain -,\, ',""          
 * The length of the password should be at least 8.
 * Required when ``scheduler_type: ""slurm""``.
+* The first character of the string should be an alphabet.
 
      **Default value**: ``""password""``           "
 "**ansible_config_file_path**

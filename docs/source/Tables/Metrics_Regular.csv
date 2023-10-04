@@ -6,7 +6,7 @@ CPUSystem (s),``psutil.cpu_times().system``,Metric Value/ No Data,"* This could 
 CPUWait (s),``psutil.cpu_times().iowait``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
 ErrorsRecv,``psutil.net_io_counters(pernic=True).get(interface_name).errin``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information.",Error packets received  for Individual network interfaces will be populated,Node
+* OMNIA telemetry service encounters an exception in retrieving the information.",Error packets received for Individual network interfaces will be populated,Node
 ErrorsSent,``psutil.net_io_counters(pernic=True).get(interface_name).errout``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",Error packets sent for Individual network interfaces will be populated,Node
 FailedJobs,``sacct -P --delimiter=\t``,Metric Value/ No Data,* When Slurm is not installed.                                                                      * OMNIA telemetry service encounters an exception in retrieving the information,,Cluster

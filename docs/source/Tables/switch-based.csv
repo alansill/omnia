@@ -88,14 +88,16 @@ Required","Default lease time for IPs assigned by DHCP. Range: 21600-86400
 
 Required","* Password set for the root account of target nodes during provisioning.
 * Length >= 8 characters
-* Password must not contain -,\, ',"""
+* Password must not contain -,\, ',""
+* The first character of the string should be an alphabet."
 "**postgresdb_password**
 
 ``string``
 
 Required","* Password set for the postgresDB on target nodes during provisioning.
 * Length >= 8 characters
-* Password must not contain -,\, ',"""
+* Password must not contain -,\, ',""
+* The first character of the string should be an alphabet."
 "**node_name**
 
 ``string``
@@ -163,7 +165,8 @@ Required",The non-admin SNMPv3 username for the switch.
 
 ``string``
 
-Required",The non-admin SNMPv3 password for the switch.
+Required","* The non-admin SNMPv3 password for the switch.
+* The first character of the string should be an alphabet."
 "**ip_start_range**
 
 ``string``

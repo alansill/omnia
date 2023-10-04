@@ -3,7 +3,7 @@ Telemetry and visualizations
 
 The telemetry feature allows the set up  of Omnia telemetry and/or iDRAC telemetry. It also installs `Grafana <https://grafana.com/>`_ and `Loki <https://grafana.com/oss/loki/>`_ as Kubernetes pods.
 
-To initiate telemetry support, fill out the following parameters in ``omnia/input/telemetry_config.yml``:
+To initiate telemetry support, fill out the following parameters in ``input/telemetry_config.yml``:
 
 .. csv-table:: Parameters
    :file: ../../Tables/telemetry_config.csv
@@ -68,7 +68,7 @@ ii. Login to the Grafana UI by connecting to the cluster IP of grafana service o
 .. image:: ../../images/Grafana_login.png
 
 
-iii. Enter the ``grafana_username`` and ``grafana_password`` as mentioned in ``monitor/monitor_config.yml``.
+iii. Enter the ``grafana_username`` and ``grafana_password`` as mentioned in ``input/telemetry_config.yml``.
 
 
 .. image:: ../../images/Grafana_Dashboards.png

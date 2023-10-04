@@ -80,7 +80,8 @@ Required	","* Username used to access timescaleDB.
 
 Required	","* Password used to used to access timescaleDB.
 * The password must not   contain -,\, ',"".
-* The length of the password should be at least 2   characters."
+* The length of the password should be at least 2   characters.
+* The first character of the string should be an alphabet."
 "**idrac_username**
 
 ``string``
@@ -94,7 +95,8 @@ Optional	","* Username used to authenticate to iDRAC.
 
 Optional	","* Password used to authenticate to iDRAC.
 * The password must not   contain -,\, ',"".
-* Required if ``idrac_telemetry_support`` is true."
+* Required if ``idrac_telemetry_support`` is true.
+* The first character of the string should be an alphabet."
 "**mysqldb_user**
 
 ``string``
@@ -110,7 +112,8 @@ Optional	","* Username used to authenticate to mysqldb.
 Optional	","* Password used to authenticate to mysqldb.
 * The password must not   contain -,\, ',"".
 * The length of the password should be at least 2 characters.
-* Required if ``idrac_telemetry_support`` is true."
+* Required if ``idrac_telemetry_support`` is true.
+* The first character of the string should be an alphabet."
 "**mysqldb_root_password**
 
 ``string``
@@ -118,7 +121,8 @@ Optional	","* Password used to authenticate to mysqldb.
 Optional	","* Password used to authenticate to mysqldb as a root user.
 * The password must not   contain -,\, ',"".
 * The length of the password should be at least 2 characters.
-* Required if ``idrac_telemetry_support`` is true."
+* Required if ``idrac_telemetry_support`` is true.
+* The first character of the string should be an alphabet."
 "**omnia_telemetry_collection_interval**
 
 ``integer``
@@ -187,7 +191,8 @@ Optional","* The username for grafana UI
 Optional","* The password for grafana UI
 * The length of password should be at least 5
 * The password must not contain -,\, ',""
-* The password cannot be set to 'admin'
+* The password cannot be set to 'admin'.
+* The first character of the string should be an alphabet.
 * Mandatory when ``visualization_support`` is true."
 "**mount_location**
 
