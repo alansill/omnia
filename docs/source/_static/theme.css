@@ -22,6 +22,9 @@
     cursor: pointer;
     *zoom: 1;
 }
+.rst-content code.literal {
+    word-break: break-all; !important;
+}
 .wy-side-nav-search .wy-dropdown>a img.logo,
 .wy-side-nav-search>a img.logo {
     display: block;

@@ -29,13 +29,6 @@ Use this playbook to download docker images and pull images onto cluster nodes u
 |                         |                                                                                                           |
 |                         | * If provided, docker credentials in ``omnia_config.yml``, it will be used for downloading docker images. |
 |                         |                                                                                                           |
-|                         | * **Default value:** ::                                                                                   |
-|                         |                                                                                                           |
-|                         | 	hpc_apptainer_image:                                                                                  |
-|                         | 	                                                                                                      |
-|                         | 	- { image_url: "docker.io/intel/oneapi-hpckit:latest" }                                               |
-|                         |                                                                                                           |
-|                         |                                                                                                           |
 +-------------------------+-----------------------------------------------------------------------------------------------------------+
 | **hpc_apptainer_path**  | * Directory to filepath for storing apptainer sif files on cluster nodes.                                 |
 |                         |                                                                                                           |
