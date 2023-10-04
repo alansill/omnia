@@ -1,40 +1,40 @@
 Metric Name,Command,Error value(s),Potential cause(s),Comments,Aggregation Level
 Dmesg,``dmesg --level=err``,Unknown/fail,"* [Unknown]OMNIA telemetry service encounters an exception while retrieving information. 
 * [Unknown] The dmesg command was not found on the cluster node.
-* [Fail] The dmesg command returned an error.",,Node Level
+* [Fail] The dmesg command returned an error.",,Node
 Beegfs client Reachable,"``systemctl is-active beegfs-client``
 ``beegfs-ctl --nodetype=client --listnodes``",Unknown/fail,"* [Unknown]OMNIA telemetry service encounters an exception while retrieving information.
 * [Unknown] BeeGFS is not installed or inactive.  
-* [Fail] The BeeGFS client service has failed or the node is not present in reachable lists of BeeGFS clients.",,Node Level
+* [Fail] The BeeGFS client service has failed or the node is not present in reachable lists of BeeGFS clients.",,Node
 gpu_driver_health:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=driver_version --format=csv,nounits``
 For AMD GPU: ``rocm-smi --showdriverversion --csv``",Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ",,Node Level
+* OMNIA telemetry service encountered an exception.               ",,Node
 gpu_health_nvlink:gpu,NVIDIA: ``nvidia-smi nvlink --status``,Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ",,Node Level
+* OMNIA telemetry service encountered an exception.               ",,Node
 gpu_health_pcie:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits``
 For AMD GPU: ``rocm-smi --showbus --csv``",Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ",,Node Level
+* OMNIA telemetry service encountered an exception.               ",,Node
 gpu_health_pmu:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=power.management --format=csv,nounits``",Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ",PMU - Power management unit,Node Level
+* OMNIA telemetry service encountered an exception.               ",PMU - Power management unit,Node
 gpu_health_power:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=power.limit,power.draw --format=csv,nounits``
 For AMD GPU: ``rocm-smi -P -M --csv``",Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ",Power consumption,Node Level
+* OMNIA telemetry service encountered an exception.               ",Power consumption,Node
 gpu_health_thermal,"For NVIDIA GPU: ``nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits``
 For AMD GPU: ``rocm-smi -t --csv``",Unknown,"* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ",Thermal is GPU temperature health,Node Level
+* OMNIA telemetry service encountered an exception.               ",Thermal is GPU temperature health,Node
 Kubernetespodsstatus,``sudo kubectl get pods -A -o json``,Unknown,"* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception.","Value is Pass when all pods and containers are in running state, otherwise Fail.",Cluster Level
+* OMNIA telemetry service encountered an exception.","Value is Pass when all pods and containers are in running state, otherwise Fail.",Cluster
 Kuberneteschildnode,``sudo kubectl get nodes -o json``,Unknown,"* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception.","Value is Pass when all child nodes are in Ready state, otherwise Fail.",Cluster Level
+* OMNIA telemetry service encountered an exception.","Value is Pass when all child nodes are in Ready state, otherwise Fail.",Cluster
 kubernetesnodesstatus,``sudo kubectl get nodes -o json``,Unknown,"* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception.","Value is Pass when all nodes are in Ready state, otherwise Fail.",Cluster Level
+* OMNIA telemetry service encountered an exception.","Value is Pass when all nodes are in Ready state, otherwise Fail.",Cluster
 kubernetescomponentsstatus,``sudo kubectl get --raw=/livez?verbose``,Unknown,"* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception.","Value is Pass when healthz check is passed in ""kubectl get --raw=/livez?verbose"" command , otherwise fail.",Cluster Level
+* OMNIA telemetry service encountered an exception.","Value is Pass when healthz check is passed in ""kubectl get --raw=/livez?verbose"" command , otherwise fail.",Cluster
 Smart,``smartctl -a hda``,Unknown,"* smartctl commands failed.
-* OMNIA telemetry service encounters an exception while retrieving information. ",,Node Level
+* OMNIA telemetry service encounters an exception while retrieving information. ",,Node
