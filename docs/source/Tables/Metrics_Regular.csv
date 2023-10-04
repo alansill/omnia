@@ -57,6 +57,6 @@ RunningJobs,``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``,Metric Value/ No Data
 * OMNIA telemetry service encounters an exception in retrieving the information.
 
 ",,Cluster
-SMARTHDATemp (°C),``smartctl -a had``,Metric Value/ No Data,"* ``smartctl`` commands failed.
+SMARTHDATemp (°C),``smartctl -a hda``,Metric Value/ No Data,"* ``smartctl`` commands failed.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
 UniqueUserLogin,"``who|cut -f 1 -d "" ""|sort -u|wc -l``",Metric Value/ No Data,OMNIA telemetry service encounters an exception in retrieving the information,,Login/ Manager Node [1]_

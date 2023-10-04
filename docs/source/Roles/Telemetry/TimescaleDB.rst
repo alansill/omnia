@@ -12,9 +12,9 @@ Timescale DB
 
     .. image:: ../../images/TimescaleDB_Ports.png
 
-3. Connect to DB (``psql -h <host_ip> -p <timescaldb_port> -U <timescaledb_username> -d telemetry_metrics``)
+3. Connect to DB (``psql -h <host_ip> -p <timescaledb_port> -U <timescaledb_username> -d telemetry_metrics``)
 
-.. note:: You will be prompted for the timescaldb password before being given access.
+.. note:: You will be prompted for the timescaledb password before being given access.
 
 4. Query the database using SQL syntax.
 
