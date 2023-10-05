@@ -17,6 +17,7 @@ For AMD GPU: ``rocm-smi --showdriverversion --csv``","* Unknown
 * OMNIA telemetry service encountered an exception.               ",,Node
 gpu_health_nvlink:gpu,NVIDIA: ``nvidia-smi nvlink --status``,"* Unknown
 * Metric Value","* AMD/NVIDIA  accelerators are not present.
+* NVLinks are not present.
 * GPU drivers are not installed including Rocm and CUDA.
 * OMNIA telemetry service encountered an exception.               ",,Node
 gpu_health_pcie:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits``
