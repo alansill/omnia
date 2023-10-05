@@ -2,8 +2,8 @@ Logging
 =========
 
 .. toctree::
-LogManagement
-ControlPlaneLogs
+    LogManagement
+    ControlPlaneLogs
 
 
 

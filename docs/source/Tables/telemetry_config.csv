@@ -135,7 +135,7 @@ Required	","* This variable denotes the time interval (seconds) of telemetry dat
 ``boolean``  [1]_
 
 Required	","* This variable is used to enable metric collection part of the regular metric group.
-* For a list of regular metrics collected, click here. <TelemetryMetrics.html#regular-metrics>
+* For a list of regular metrics collected, `click here. <TelemetryMetrics.html#regular-metrics>`_
 * **Values:**
 	* ``true`` <- **Default**
 
@@ -145,7 +145,7 @@ Required	","* This variable is used to enable metric collection part of the regu
 ``boolean``  [1]_
 
 Required	","* This variable is used to enable metric collection part of the health check metric group.
-* For a list of regular metrics collected, click here. <TelemetryMetrics.html#health-metrics>
+* For a list of health metrics collected, `click here. <TelemetryMetrics.html#health-metrics>`_
 * **Values:** 
 	* ``true`` <- **Default**
 
@@ -155,6 +155,8 @@ Required	","* This variable is used to enable metric collection part of the heal
 ``boolean``  [1]_
 
 Required	","* This variable is used to enable metric collection related to GPU.
+* For a list of GPU metrics collected, `click here. <TelemetryMetrics.html#health-metrics>`_
+
 
 * **Values:**
 	* ``true`` <- **Default**
