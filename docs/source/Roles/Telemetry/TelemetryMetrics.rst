@@ -4,7 +4,7 @@ Metrics collected
 Regular metrics
 ---------------
 
-.. csv-table:: Telemetry metrics
+.. csv-table:: Regular metrics
    :file: ../../Tables/Metrics_Regular.csv
    :header-rows: 1
    :keepspace:
@@ -14,7 +14,7 @@ Regular metrics
 Health metrics
 ---------------
 
-.. csv-table:: Telemetry metrics
+.. csv-table:: Health metrics
    :file: ../../Tables/Metrics_Health.csv
    :header-rows: 1
    :keepspace:
@@ -22,7 +22,7 @@ Health metrics
 GPU metrics
 ---------------
 
-.. csv-table:: Telemetry metrics
+.. csv-table:: GPU metrics
    :file: ../../Tables/Metrics_GPU.csv
    :header-rows: 1
    :keepspace:

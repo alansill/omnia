@@ -1,62 +1,85 @@
 Metric Name,Command,Possible Values,Possible causes,Comments,Aggregation Level
-BlockedProcesses (processes),``grep procs_blocked /proc/stat``,Metric Value/ No Data,"* This could happen if the ``/proc/stat`` file is inaccessible.
+BlockedProcesses (processes),``grep procs_blocked /proc/stat``,"* Metric Value
+* No Data","* This could happen if the ``/proc/stat`` file is inaccessible.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-CPUSystem (s),``psutil.cpu_times().system``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+CPUSystem (s),``psutil.cpu_times().system``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-CPUWait (s),``psutil.cpu_times().iowait``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+CPUWait (s),``psutil.cpu_times().iowait``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-ErrorsRecv,``psutil.net_io_counters(pernic=True).get(interface_name).errin``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+ErrorsRecv,``psutil.net_io_counters(pernic=True).get(interface_name).errin``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",Error packets received for Individual network interfaces will be populated,Node
-ErrorsSent,``psutil.net_io_counters(pernic=True).get(interface_name).errout``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+ErrorsSent,``psutil.net_io_counters(pernic=True).get(interface_name).errout``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",Error packets sent for Individual network interfaces will be populated,Node
-FailedJobs,``sacct -P --delimiter=\t``,Metric Value/ No Data,"* When Slurm is not installed.
+FailedJobs,``sacct -P --delimiter=\t``,"* Metric Value
+* No Data","* When Slurm is not installed.
 * OMNIA telemetry service encounters an exception in retrieving the information",,Cluster
-HardwareCorruptedMemory (kB),``grep HardwareCorrupted /proc/meminfo``,Metric Value/ No Data,"* This could happen if the ``/proc/meminfo`` file is inaccessible.
+HardwareCorruptedMemory (kB),``grep HardwareCorrupted /proc/meminfo``,"* Metric Value
+* No Data","* This could happen if the ``/proc/meminfo`` file is inaccessible.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-MemoryActive (Bytes),``psutil.virtual_memory().active``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+MemoryActive (Bytes),``psutil.virtual_memory().active``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-MemoryAvailable (Bytes),``psutil.virtual_memory().available``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+MemoryAvailable (Bytes),``psutil.virtual_memory().available``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-MemoryCached (Bytes),``psutil.virtual_memory().cached``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+MemoryCached (Bytes),``psutil.virtual_memory().cached``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-MemoryFree (Bytes),``psutil.virtual_memory().free``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+MemoryFree (Bytes),``psutil.virtual_memory().free``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-MemoryInactive (Bytes),``psutil.virtual_memory().inactive``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+MemoryInactive (Bytes),``psutil.virtual_memory().inactive``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-MemoryPercent (%),``psutil.virtual_memory().percent``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+MemoryPercent (%),``psutil.virtual_memory().percent``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-MemoryShared (Bytes),``psutil.virtual_memory().shared``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+MemoryShared (Bytes),``psutil.virtual_memory().shared``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-MemoryTotal (Bytes),``psutil.virtual_memory().total``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+MemoryTotal (Bytes),``psutil.virtual_memory().total``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-MemoryUsed (Bytes),``psutil.virtual_memory().used``,Metric Value/ No Data,"* This could happen when the ``psutil`` library encounters errors.
+MemoryUsed (Bytes),``psutil.virtual_memory().used``,"* Metric Value
+* No Data","* This could happen when the ``psutil`` library encounters errors.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-NodesDown,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,Metric Value/ No Data,"* Slurm is not installed.
+NodesDown,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,"* Metric Value
+* No Data","* Slurm is not installed.
 * OMNIA telemetry service encounters an exception in retrieving the information.
 
 ","Node is considered down if node state is any of the following:
 down, drained, draining, fail, failing, future, inval, maint, powered_down, powering_down, unknown, unk
 
 .. note:: Node state with * in suffix will be considered as down node.  Example, idle* will be considered as down node.",Cluster
-NodesTotal,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,Metric Value/ No Data,"* Slurm is not installed.
+NodesTotal,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,"* Metric Value
+* No Data","* Slurm is not installed.
 * OMNIA telemetry service encounters an exception in retrieving the information.
 
 ",,Cluster
-NodesUp,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,Metric Value/ No Data,"* Slurm is not installed.
+NodesUp,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,"* Metric Value
+* No Data","* Slurm is not installed.
 * OMNIA telemetry service encounters an exception in retrieving the information.
 
 ","Node is considered down if node state is any of the following:
 down, drained, draining, fail, failing, future, inval, maint, powered_down, powering_down, unknown, unk
 
 .. note:: Node state with * in suffix will be considered as down node.  Example, idle* will be considered as down node.",Cluster
-QueuedJobs,``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``,Metric Value/ No Data,"* Slurm is not installed.
+QueuedJobs,``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``,"* Metric Value
+* No Data","* Slurm is not installed.
 * OMNIA telemetry service encounters an exception in retrieving the information.
 
 ",,Cluster
-RunningJobs,``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``,Metric Value/ No Data,"* Slurm is not installed.
+RunningJobs,``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``,"* Metric Value
+* No Data","* Slurm is not installed.
 * OMNIA telemetry service encounters an exception in retrieving the information.
 
 ",,Cluster
-SMARTHDATemp (°C),``smartctl -a hda``,Metric Value/ No Data,"* ``smartctl`` commands failed.
+SMARTHDATemp (°C),``smartctl -a hda``,"* Metric Value
+* No Data","* ``smartctl`` commands failed.
 * OMNIA telemetry service encounters an exception in retrieving the information.",,Node
-UniqueUserLogin,"``who|cut -f 1 -d "" ""|sort -u|wc -l``",Metric Value/ No Data,OMNIA telemetry service encounters an exception in retrieving the information,,Login/ Manager Node [1]_
+UniqueUserLogin,"``who|cut -f 1 -d "" ""|sort -u|wc -l``","* Metric Value
+* No Data",OMNIA telemetry service encounters an exception in retrieving the information,,Login/ Manager Node [1]_

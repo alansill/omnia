@@ -1,17 +1,20 @@
 Metric Name,Error value(s),Potential cause(s),Command,Comments,Aggregation Level
-gpu_temperature:gpu (°C),No Data,"* AMD/NVIDIA  accelerators are not present.
+gpu_temperature:gpu (°C),"* Metric value
+* No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits``
+* OMNIA telemetry service encountered an exception.               ","* For NVIDIA GPU: ``nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits``
 
-For AMD GPU: ``rocm-smi -t --csv``
+* For AMD GPU: ``rocm-smi -t --csv``
 ",,Node
-gpu_utilization: (%),No Data,"* AMD/NVIDIA  accelerators are not present.
+gpu_utilization: (%),"* Metric value
+* No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits``
+* OMNIA telemetry service encountered an exception.               ","* For NVIDIA GPU: ``nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits``
 
-For AMD GPU: ``rocm-smi -u --csv``",,Node
-gpu_utilization:average (%),No Data,"* AMD/NVIDIA  accelerators are not present.
+* For AMD GPU: ``rocm-smi -u --csv``",,Node
+gpu_utilization:average (%),"* Metric value
+* No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","For NVIDIA GPU: ``nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits``
+* OMNIA telemetry service encountered an exception.               ","* For NVIDIA GPU: ``nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits``
 
-For AMD GPU: ``rocm-smi -u --csv``",Value is average of utilization value of all GPUs,Node
+* For AMD GPU: ``rocm-smi -u --csv``",Value is average of utilization value of all GPUs,Node
