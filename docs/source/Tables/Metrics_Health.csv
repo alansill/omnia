@@ -54,5 +54,6 @@ kubernetesnodesstatus,``sudo kubectl get nodes -o json``,"* Unknown
 kubernetescomponentsstatus,``sudo kubectl get --raw=/livez?verbose``,"* Unknown
 * Metric Value","* Kubernetes is not installed.
 * OMNIA telemetry service encountered an exception.","Value is Pass when healthz check is passed in ""kubectl get --raw=/livez?verbose"" command , otherwise fail.",Cluster
-Smart,``smartctl -a hda``,Unknown,"* smartctl commands failed.
+Smart,``smartctl -a hda``,"* Unknown
+* Metric Value","* smartctl commands failed.
 * OMNIA telemetry service encounters an exception while retrieving information. ",,Node
