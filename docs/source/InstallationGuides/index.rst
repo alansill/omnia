@@ -27,6 +27,8 @@ Change directory to Omnia using: ::
 
 Run the script ``prereq.sh`` to verify the system is ready for Omnia deployment.
 
+.. note:: The permisssions on the Omnia directory are set to **0755** by default. Do not change these values.
+
 .. toctree::
     RunningInit/index
     InstallingProvisionTool/index

@@ -74,7 +74,7 @@ iii. Enter the ``grafana_username`` and ``grafana_password`` as mentioned in ``i
 .. image:: ../../images/Grafana_Dashboards.png
 
 
-Loki log collections and telemetry/kubernetes dashboards can viewed on the explore section of the grafana UI.
+Loki log collections can viewed on the explore section of the grafana UI.
 
 
 .. image:: ../../images/Grafana_Loki.png
