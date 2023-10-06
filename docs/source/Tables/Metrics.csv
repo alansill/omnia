@@ -1,0 +1,47 @@
+Metric Name,Command,Comments,Aggregation Level
+BlockedProcesses,``grep procs_blocked /proc/stat``,,Node Level
+CPUSystem,``psutil.cpu_times().system``,,Node Level
+CPUWait,``psutil.cpu_times().iowait``,,Node Level
+FailedJobs,``sacct -P --delimiter=\t``,Error packets received  for Individual network interfaces will be populated.,Cluster Level
+HardwareCorruptedMemory,``grep HardwareCorrupted /proc/meminfo``,Error packets sent  for Individual network interfaces will be populated.,Node Level
+MemoryActive,``psutil.virtual_memory().active``,,Node Level
+MemoryAvailable,``psutil.virtual_memory().available``,,Node Level
+MemoryCached,``psutil.virtual_memory().cached``,,Node Level
+MemoryFree,``psutil.virtual_memory().free``,,Node Level
+MemoryInactive,``psutil.virtual_memory().inactive``,,Node Level
+MemoryPercent,``psutil.virtual_memory().percent``,,Node Level
+MemoryShared,``psutil.virtual_memory().shared``,,Node Level
+MemoryTotal,``psutil.virtual_memory().total``,,Node Level
+MemoryUsed,``psutil.virtual_memory().used``,,Node Level
+NodesDown,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,"Node is considered down if node state is any of the following:
+down, drained, draining, fail, failing, future, inval, maint, powered_down, powering_down, unknown, unk
+
+.. note::  Node state with * in suffix will be considered as down node.  Example, idle* will be considered as down node.",Cluster Level
+NodesTotal,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,,Cluster Level
+NodesUp,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,,Cluster Level
+QueuedJobs,``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``,,Cluster Level
+RunningJobs,``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``,,Cluster Level
+SMARTHDATemp,``smartctl -a hda``,,Node Level
+UniqueUserLogin,"``who|cut -f 1 -d "" ""|sort -u|wc -l``",,"Login Node/ Manager Node*
+
+* If Login Node is not present"
+Dmesg,``dmesg --level=err``,,Cluster Level
+Beegfs client Reachable,"``systemctl is-active beegfs-client``
+``beegfs-ctl --nodetype=client --listnodes``",,Node Level
+gpu_driver_health:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=driver_version --format=csv,nounits``
+* For AMD GPU: ``rocm-smi --showdriverversion --csv``",,Node Level
+gpu_health_nvlink:gpu,NVIDIA: ``nvidia-smi nvlink --status``,,Node Level
+gpu_health_pcie:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits``
+* For AMD GPU: ``rocm-smi --showbus --csv``",,Node Level
+gpu_health_pmu:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=power.management --format=csv,nounits``",,Node Level
+gpu_health_power:gpu,"For NVIDIA GPU: nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits",This is a node level metric.,Node Level
+gpu_health_thermal,For AMD GPU: rocm-smi --showbus --csv,This is a node level metric.,Node Level
+Kubernetespodsstatus,``sudo kubectl get pods -A -o json``,,Node Level
+Kuberneteschildnode,``sudo kubectl get nodes -o json``,,Node Level
+kubernetesnodesstatus,``sudo kubectl get nodes -o json``,,Cluster Level
+Smart,``smartctl -a hda``,Power consumption,Cluster Level
+gpu_temperature:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits``
+* For AMD GPU: ``rocm-smi -t --csv``",Thermal is GPU temperature health,Node Level
+gpu_utilization:,"* For NVIDIA GPU: ``nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits``
+* For AMD GPU: ``rocm-smi -u --csv``",,Node Level
+gpu_utilization:average,sudo kubectl get nodes -o json,"Value is Pass when all child nodes are in Ready state, otherwise Fail.",Node Level

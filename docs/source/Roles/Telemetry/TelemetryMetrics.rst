@@ -11,7 +11,6 @@ Your cluster in numbers: Regular metrics include information such as CPU, memory
    :header-rows: 1
    :keepspace:
 
-.. [1] This metric is collected from the manager node if a login node is absent.
 
 Health metrics
 ---------------

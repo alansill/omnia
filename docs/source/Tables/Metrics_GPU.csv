@@ -1,20 +1,13 @@
-Metric Name,Error value(s),Potential cause(s),Command,Comments,Aggregation Level
+Metric Name,Error value(s),Potential error cause(s),Unit
 gpu_temperature:gpu (°C),"* Metric value
 * No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","* For NVIDIA GPU: ``nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits``
-
-* For AMD GPU: ``rocm-smi -t --csv``
-",,Node
+* OMNIA telemetry service encountered an exception.               ",Celsius
 gpu_utilization: (%),"* Metric value
 * No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","* For NVIDIA GPU: ``nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits``
-
-* For AMD GPU: ``rocm-smi -u --csv``",,Node
+* OMNIA telemetry service encountered an exception.               ",Percentage
 gpu_utilization:average (%),"* Metric value
 * No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               ","* For NVIDIA GPU: ``nvidia-smi nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits``
-
-* For AMD GPU: ``rocm-smi -u --csv``",Value is average of utilization value of all GPUs,Node
+* OMNIA telemetry service encountered an exception.               ",Percentage
