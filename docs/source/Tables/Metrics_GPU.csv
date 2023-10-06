@@ -1,13 +1,13 @@
 Metric Name,Error value(s),Potential error cause(s),Unit
-gpu_temperature:gpu (°C),"* Metric value
+gpu_temperature:gpu,"* Metric value
 * No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
 * OMNIA telemetry service encountered an exception.               ",Celsius
-gpu_utilization: (%),"* Metric value
+gpu_utilization,"* Metric value
 * No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
 * OMNIA telemetry service encountered an exception.               ",Percentage
-gpu_utilization:average (%),"* Metric value
+gpu_utilization:average,"* Metric value
 * No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
 * OMNIA telemetry service encountered an exception.               ",Percentage
