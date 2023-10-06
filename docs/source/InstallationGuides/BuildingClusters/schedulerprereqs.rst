@@ -5,7 +5,7 @@ Before you build clusters
 
 * Verify that all inventory files are updated.
 
-* If the cluster cluster requires more than 10 kubernetes nodes, use a docker enterprise account to avoid docker pull limits.
+* If the cluster requires more than 10 kubernetes nodes, use a docker enterprise account to avoid docker pull limits.
 
 * Verify that all nodes are assigned a group. Use the `inventory <../../samplefiles.html>`_ as a reference. The inventory file is case-sensitive. Follow the casing provided in the sample file link.
 

@@ -1,51 +1,57 @@
-Metric Name,Possible error value(s),Potential cause(s)
+Metric Name,Possible value(s),Possible failure causes
 Dmesg,"* Unknown
 * Fail
-* Metric Value","* [Unknown]OMNIA telemetry service encounters an exception while retrieving information.
-* [Unknown] The dmesg command was not found on the cluster node.
-* [Fail] The dmesg command returned an error."
+* Pass","* [Unknown] The dmesg command was not found on the cluster node.
+* [Fail] The dmesg command returned an error log message."
 Beegfs client Reachable,"* Unknown
 * Fail
-* Metric Value","* [Unknown]OMNIA telemetry service encounters an exception while retrieving information.
-* [Unknown] BeeGFS is not installed or inactive.  
+* Pass","* [Unknown] BeeGFS is not installed or inactive.
 * [Fail] The BeeGFS client service has failed or the node is not present in reachable lists of BeeGFS clients."
 gpu_driver_health:gpu,"* Unknown
-* Metric Value","* AMD/NVIDIA  accelerators are not present.
-* GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               "
-gpu_health_nvlink:gpu,"* Unknown
-* Metric Value","* AMD/NVIDIA  accelerators are not present.
+* Fail
+* Pass","* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.               "
+gpu_health_nvlink:gpu ,"* Unknown
+* Fail
+* Pass","* AMD/NVIDIA  accelerators are not present.
 * NVLinks are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               "
+"
 gpu_health_pcie:gpu,"* Unknown
-* Metric Value","* AMD/NVIDIA  accelerators are not present.
+* Fail
+* Pass","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               "
+          "
 gpu_health_pmu:gpu,"* Unknown
-* Metric Value","* AMD/NVIDIA  accelerators are not present.
+* Fail
+* Pass","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               "
+   "
 gpu_health_power:gpu,"* Unknown
+* Fail
+* Pass","* AMD/NVIDIA  accelerators are not present.
+* GPU drivers are not installed including Rocm and CUDA.
+           "
+gpu_health_temperature:gpu,"* Unknown
 * Metric Value","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               "
-gpu_health_thermal,"* Unknown
-* Metric Value","* AMD/NVIDIA  accelerators are not present.
-* GPU drivers are not installed including Rocm and CUDA.
-* OMNIA telemetry service encountered an exception.               "
+"
 Kubernetespodsstatus,"* Unknown
-* Metric Value","* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception."
+* Fail
+* Pass","* Kubernetes is not installed.
+"
 Kuberneteschildnode,"* Unknown
-* Metric Value","* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception."
+* Fail
+* Pass","* Kubernetes is not installed.
+"
 kubernetesnodesstatus,"* Unknown
-* Metric Value","* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception."
+* Fail
+* Pass","* Kubernetes is not installed.
+"
 kubernetescomponentsstatus,"* Unknown
-* Metric Value","* Kubernetes is not installed.
-* OMNIA telemetry service encountered an exception."
+* Fail
+* Pass","* Kubernetes is not installed.
+"
 Smart,"* Unknown
-* Metric Value","* smartctl commands failed.
-* OMNIA telemetry service encounters an exception while retrieving information. "
+* Fail
+* Pass",* smartctl commands failed.

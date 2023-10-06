@@ -4,15 +4,15 @@ CPUSystem,``psutil.cpu_times().system``,,Node Level
 CPUWait,``psutil.cpu_times().iowait``,,Node Level
 FailedJobs,``sacct -P --delimiter=\t``,Error packets received  for Individual network interfaces will be populated.,Cluster Level
 HardwareCorruptedMemory,``grep HardwareCorrupted /proc/meminfo``,Error packets sent  for Individual network interfaces will be populated.,Node Level
-MemoryActive,``psutil.virtual_memory().active``,,Node Level
-MemoryAvailable,``psutil.virtual_memory().available``,,Node Level
+MemoryActive ,``psutil.virtual_memory().active``,,Node Level
+MemoryAvailable ,``psutil.virtual_memory().available``,,Node Level
 MemoryCached,``psutil.virtual_memory().cached``,,Node Level
 MemoryFree,``psutil.virtual_memory().free``,,Node Level
-MemoryInactive,``psutil.virtual_memory().inactive``,,Node Level
-MemoryPercent,``psutil.virtual_memory().percent``,,Node Level
-MemoryShared,``psutil.virtual_memory().shared``,,Node Level
-MemoryTotal,``psutil.virtual_memory().total``,,Node Level
-MemoryUsed,``psutil.virtual_memory().used``,,Node Level
+MemoryInactive ,``psutil.virtual_memory().inactive``,,Node Level
+MemoryPercent ,``psutil.virtual_memory().percent``,,Node Level
+MemoryShared ,``psutil.virtual_memory().shared``,,Node Level
+MemoryTotal ,``psutil.virtual_memory().total``,,Node Level
+MemoryUsed ,``psutil.virtual_memory().used``,,Node Level
 NodesDown,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,"Node is considered down if node state is any of the following:
 down, drained, draining, fail, failing, future, inval, maint, powered_down, powering_down, unknown, unk
 
@@ -34,8 +34,8 @@ gpu_health_nvlink:gpu,NVIDIA: ``nvidia-smi nvlink --status``,,Node Level
 gpu_health_pcie:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits``
 * For AMD GPU: ``rocm-smi --showbus --csv``",,Node Level
 gpu_health_pmu:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=power.management --format=csv,nounits``",,Node Level
-gpu_health_power:gpu,"For NVIDIA GPU: nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits",This is a node level metric.,Node Level
-gpu_health_thermal,For AMD GPU: rocm-smi --showbus --csv,This is a node level metric.,Node Level
+gpu_health_power:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits``",This is a node level metric.,Node Level
+gpu_health_temperature:gpu,For AMD GPU: ``rocm-smi --showbus --csv``,This is a node level metric.,Node Level
 Kubernetespodsstatus,``sudo kubectl get pods -A -o json``,,Node Level
 Kuberneteschildnode,``sudo kubectl get nodes -o json``,,Node Level
 kubernetesnodesstatus,``sudo kubectl get nodes -o json``,,Cluster Level

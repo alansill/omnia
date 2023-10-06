@@ -1,79 +1,79 @@
 Metric Name,Unit,Possible Values,Possible error causes
-BlockedProcesses,Processes,"* Metric Value
+BlockedProcesses,"","* Metric Value
 * No Data","* This could happen if the ``/proc/stat`` file is inaccessible.
 * OMNIA telemetry service encounters an exception in retrieving the information."
 CPUSystem,Seconds,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+* No Data","* This could happen when the ``psutil``  library encounters errors.
+  "
 CPUWait,Seconds,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
-ErrorsRecv,Errors,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
-ErrorsSent,Errors,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
-FailedJobs,Jobs,"* Metric Value
+* No Data","* This could happen when the ``psutil``   library encounters errors.
+  "
+ErrorsRecv,"","* Metric Value
+* No Data","* This could happen when the ``psutil``  library encounters errors.
+  "
+ErrorsSent,"","* Metric Value
+* No Data","* This could happen when the ``psutil``  library encounters errors.
+  "
+FailedJobs,"","* Metric Value
 * No Data","* When Slurm is not installed.
 * OMNIA telemetry service encounters an exception in retrieving the information"
 HardwareCorruptedMemory,Kb,"* Metric Value
 * No Data","* This could happen if the ``/proc/meminfo`` file is inaccessible.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+  "
 MemoryActive,Bytes,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+* No Data","* This could happen when the ``psutil``  library encounters errors.
+  "
 MemoryAvailable,Bytes,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+* No Data","* This could happen when the ``psutil``  library encounters errors.
+  "
 MemoryCached,Bytes,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+* No Data","* This could happen when the ``psutil``   library encounters errors.
+  "
 MemoryFree,Bytes,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+* No Data","* This could happen when the ``psutil``   library encounters errors.
+  "
 MemoryInactive,Bytes,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
-MemoryPercent,Percentage,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+* No Data","* This could happen when the ``psutil``  library encounters errors.
+  "
+MemoryPercent,Percent,"* Metric Value
+* No Data","* This could happen when the ``psutil``   library encounters errors.
+  "
 MemoryShared,Bytes,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+* No Data","* This could happen when the ``psutil``  library encounters errors.
+  "
 MemoryTotal,Bytes,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+* No Data","* This could happen when the ``psutil``  library encounters errors.
+  "
 MemoryUsed,Bytes,"* Metric Value
-* No Data","* This could happen when the ``psutil`` library encounters errors.
-* OMNIA telemetry service encounters an exception in retrieving the information."
-NodesDown,Nodes,"* Metric Value
+* No Data","* This could happen when the ``psutil``  library encounters errors.
+  "
+NodesDown,"","* Metric Value
 * No Data","* Slurm is not installed.
-* OMNIA telemetry service encounters an exception in retrieving the information.
+
 
 "
-NodesTotal,Nodes,"* Metric Value
+NodesTotal,"","* Metric Value
 * No Data","* Slurm is not installed.
-* OMNIA telemetry service encounters an exception in retrieving the information.
+
 
 "
-NodesUp,Nodes,"* Metric Value
+NodesUp,"","* Metric Value
 * No Data","* Slurm is not installed.
-* OMNIA telemetry service encounters an exception in retrieving the information.
+
 
 "
-QueuedJobs,Jobs,"* Metric Value
+QueuedJobs,"","* Metric Value
 * No Data","* Slurm is not installed.
-* OMNIA telemetry service encounters an exception in retrieving the information.
+
 
 "
-RunningJobs,Jobs,"* Metric Value
+RunningJobs,"","* Metric Value
 * No Data","* Slurm is not installed.
-* OMNIA telemetry service encounters an exception in retrieving the information.
+
 
 "
 SMARTHDATemp,Celsius,"* Metric Value
 * No Data","* ``smartctl`` commands failed.
-* OMNIA telemetry service encounters an exception in retrieving the information."
-UniqueUserLogin,Logins,"* Metric Value
-* No Data",OMNIA telemetry service encounters an exception in retrieving the information
+  "
+UniqueUserLogin,"","* Metric Value
+* No Data",""
