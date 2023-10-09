@@ -248,10 +248,10 @@ Optional                ","* The repo path and names of the software repository 
                                                                                                    
 * Provide the repo data file path, which ends with .repo extension in repo_url parameter.          
                                                                                                    
-* Provide the url for BaseOS and AppStream repositories.                                      
-                                                                                                   
-* This variable should be filled if control plane OS is RHEL and subscription is not activated.    
-                                                                                                   
+* Provide a **valid** url for BaseOS and AppStream repositories. Omnia does not validate the ``repo_url`` provided. Invalid entries will cause ``provision.yml`` to fail.
+
+* This variable should be filled if control plane OS is RHEL and subscription is not activated.
+
 * This variable should be filled if the control plane OS is Rocky and the ``provision_os`` is rhel.
 
 
