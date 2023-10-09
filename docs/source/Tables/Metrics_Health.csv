@@ -11,7 +11,7 @@ gpu_driver_health:gpu,"* Unknown
 * Fail
 * Pass","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.               "
-gpu_health_nvlink:gpu ,"* Unknown
+gpu_health_nvlink:gpu [1]_,"* Unknown
 * Fail
 * Pass","* AMD/NVIDIA  accelerators are not present.
 * NVLinks are not present.

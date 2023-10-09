@@ -35,7 +35,7 @@ Beegfs client Reachable,"``systemctl is-active beegfs-client``
 ``beegfs-ctl --nodetype=client --listnodes``",,Node Level
 gpu_driver_health:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=driver_version --format=csv,nounits``
 * For AMD GPU: ``rocm-smi --showdriverversion --csv``",,Node Level
-gpu_health_nvlink:gpu,NVIDIA: ``nvidia-smi nvlink --status``,,Node Level
+gpu_health_nvlink:gpu [1]_,NVIDIA: ``nvidia-smi nvlink --status``,,Node Level
 gpu_health_pcie:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits``
 * For AMD GPU: ``rocm-smi --showbus --csv``",,Node Level
 gpu_health_pmu:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=power.management --format=csv,nounits``",PMU - Power management unit,Node Level

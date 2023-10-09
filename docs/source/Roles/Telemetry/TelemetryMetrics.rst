@@ -22,6 +22,9 @@ The health of your cluster: Health metrics include key performance indicators.
    :header-rows: 1
    :keepspace:
 
+.. [1] While NVLink metrics are collected as part of our telemetry suite, NVLinks have not been tested for compatibility with Omnia.
+
+
 GPU metrics
 ---------------
 
