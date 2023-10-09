@@ -77,13 +77,45 @@ In the event of a mismatch, edit the file  ``/etc/sysconfig/network-scripts/ifcf
 * Users should also ensure that all repos (AppStream, BaseOS and CRB) are available on the RHEL control plane.
 
 .. note::
-    To enable the repositories, run the following commands: ::
+   * Enable a repository from your RHEL subscription, run the following commands: ::
 
             subscription-manager repos --enable=codeready-builder-for-rhel-8-x86_64-rpms
             subscription-manager repos --enable=rhel-8-for-x86_64-appstream-rpms
             subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms
 
-    Verify your changes by running: ::
+    * Enable an offline repository by creating a ``.repo`` file in ``/etc/yum.repos.d/``. Refer the below sample content: ::
+
+                [RHEL-8-appstream]
+
+                name=Red Hat AppStream repo
+
+                baseurl=http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.6/AppStream/x86_64/os/
+
+                enabled=1
+
+                gpgcheck=0
+
+                [RHEL-8-baseos]
+
+                name=Red Hat BaseOS repo
+
+                baseurl=http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.6/BaseOS/x86_64/os/
+
+                enabled=1
+
+                gpgcheck=0
+
+                [RHEL-8-crb]
+
+                name=Red Hat CRB repo
+
+                baseurl=http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.6/CRB/x86_64/os/
+
+                enabled=1
+
+                gpgcheck=0
+
+    * Verify your changes by running: ::
 
             yum repolist enabled
             Updating Subscription Management repositories.
@@ -93,7 +125,6 @@ In the event of a mismatch, edit the file  ``/etc/sysconfig/network-scripts/ifcf
                 RHEL-8-appstream-partners                                         Red Hat Enterprise Linux 8.6.0 Partners (AppStream)
                 RHEL-8-baseos-partners                                            Red Hat Enterprise Linux 8.6.0 Partners (BaseOS)
                 RHEL-8-crb-partners                                               Red Hat Enterprise Linux 8.6.0 Partners (CRB)
-
 
 * Uninstall epel-release if installed on the control plane as Omnia configures epel-release on the control plane. To uninstall epel-release, use the following commands: ::
 
