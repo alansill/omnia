@@ -12,3 +12,9 @@
     overflow: visible !important;
     width: 80%;
 }
+.rst-content table.docutils, .rst-content table.field-list, .wy-table {
+    display: block;
+    block-size: fit-content;
+    overflow: visible !important;
+    width: 80%;
+}
