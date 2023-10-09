@@ -1,7 +1,6 @@
 .wy-table-responsive table td {
     white-space: normal !important;
-    word-break: break-word; !important;
-    max-width: 400px;
+    word-break: break-all; !important;
 }
 .wy-table-responsive table th {
     background-color: #2980b9;
