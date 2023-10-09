@@ -20,7 +20,7 @@ Offline repositories for the  cluster
 |      Required                      | Choices:                                                                                                                                                                  |
 |                                    |                                                                                                                                                                           |
 |                                    |                                                                                                                                                                           |
-|                                    | * ``false``<- Default                                                                                                                                                     |
+|                                    | * ``false`` <- Default                                                                                                                                                    |
 |                                    |                                                                                                                                                                           |
 |                                    |                                                                                                                                                                           |
 |                                    | * ``true``                                                                                                                                                                |
@@ -33,7 +33,7 @@ Offline repositories for the  cluster
 | ``boolean``                        | Choices:                                                                                                                                                                  |
 |                                    |                                                                                                                                                                           |
 |                                    |                                                                                                                                                                           |
-|      Required                      | * ``false``<- Default                                                                                                                                                     |
+|      Required                      | * ``false`` <- Default                                                                                                                                                    |
 |                                    |                                                                                                                                                                           |
 |                                    |                                                                                                                                                                           |
 |                                    | * ``true``                                                                                                                                                                |
