@@ -28,7 +28,10 @@ idle, mixed, completing.
 QueuedJobs,``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``,,Cluster Level
 RunningJobs,``squeue --format=%i\t%P\t%j\t%u\t%T\t%S\t%N``,,Cluster Level
 SMARTHDATemp,``smartctl -a <device name>``,,Node Level
-UniqueUserLogin,"``who|cut -f 1 -d "" ""|sort -u|wc -l``",,"Login Node/ Manager Node (If Login Node is not present)
+UniqueUserLogin,"``who|cut -f 1 -d "" ""|sort -u|wc -l``","* Locally created users via ``useradd`` command are also counted in ``UniqueUserLogin`` count.
+* Remote logged in LDAP users are not counted in ``UniqueUserLogin`` on login nodes.
+* Remote logged in FreeIPA users are counted in ``UniqueUserLogin`` on login nodes.
+","Login Node/ Manager Node (If Login Node is not present)
 "
 Dmesg,``dmesg --level=err``,,Node Level
 Beegfs client Reachable,"``systemctl is-active beegfs-client``
@@ -40,7 +43,7 @@ gpu_health_pcie:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --for
 * For AMD GPU: ``rocm-smi --showbus --csv``",,Node Level
 gpu_health_pmu:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=power.management --format=csv,nounits``",PMU - Power management unit,Node Level
 gpu_health_power:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits``",Power consumption,Node Level
-gpu_health_temperature:gpu,For AMD GPU: ``rocm-smi --showbus --csv``,Thermal is GPU temperature health,Node Level
+gpu_health_thermal:gpu,For AMD GPU: ``rocm-smi --showbus --csv``,Thermal is GPU temperature health,Node Level
 Kubernetespodsstatus,``sudo kubectl get pods -A -o json``,"Value is Pass when all pods and containers are in running state, otherwise Fail.",Cluster Level
 Kuberneteschildnode,``sudo kubectl get nodes -o json``,"Value is Pass when all child nodes are in Ready state, otherwise Fail.",Cluster Level
 kubernetesnodesstatus,``sudo kubectl get nodes -o json``,"Value is Pass when all nodes are in Ready state, otherwise Fail.",Cluster Level

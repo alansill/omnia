@@ -241,8 +241,11 @@ Choices:
 
 Sample value: ::
 
-	- { repo: ""AppStream"", repo_url: ""http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.8/RHEL-8-appstream.repo"", repo_name: ""RHEL-8-appstream-partners"" }
-	- { repo: ""BaseOS"", repo_url: ""http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.8/RHEL-8-baseos.repo"", repo_name: ""RHEL-8-baseos-partners"" }          "
+
+		- { repo: ""AppStream"", repo_url: ""http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.8/RHEL-8-appstream.repo"", repo_name: ""RHEL-8-appstream-partners"" }
+		- { repo: ""BaseOS"", repo_url: ""http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.8/RHEL-8-baseos.repo"", repo_name: ""RHEL-8-baseos-partners"" }
+
+		"
 "**rhel_repo_local_path**
                         
 ``JSON list``           
