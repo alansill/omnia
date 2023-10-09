@@ -1,7 +1,7 @@
 Metric Name,Unit,Possible Values,Possible error causes
-BlockedProcesses,"","* Metric Value
+BlockedProcesses,Processes,"* Metric Value
 * No Data","* This could happen if the ``/proc/stat`` file is inaccessible.
-* OMNIA telemetry service encounters an exception in retrieving the information."
+"
 CPUSystem,Seconds,"* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
@@ -15,8 +15,8 @@ ErrorsSent,"","* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
 FailedJobs,"","* Metric Value
-* No Data","* When Slurm is not installed.
-* OMNIA telemetry service encounters an exception in retrieving the information"
+* No Data","* Slurm is not installed.
+"
 HardwareCorruptedMemory,Kb,"* Metric Value
 * No Data","* This could happen if the ``/proc/meminfo`` file is inaccessible.
   "
@@ -48,10 +48,7 @@ MemoryUsed,Bytes,"* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
 NodesDown,"","* Metric Value
-* No Data","* Slurm is not installed.
-
-
-"
+* No Data",* Slurm is not installed.
 NodesTotal,"","* Metric Value
 * No Data","* Slurm is not installed.
 
