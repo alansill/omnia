@@ -8,12 +8,8 @@
 }
 .wy-table-responsive {
     display: block;
+    width: fit-content;
     block-size: fit-content;
     overflow: visible !important;
-}
-.rst-content table.docutils, .rst-content table.field-list, .wy-table {
-    display: block;
-    block-size: fit-content;
-    overflow: visible !important;
-    max-width: 800px; !important;
+    max-width: 800px;
 }
