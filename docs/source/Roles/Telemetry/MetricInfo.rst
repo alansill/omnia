@@ -8,4 +8,4 @@ Additional metric information
 
 .. [1] While NVLink metrics are collected as part of our telemetry suite, NVLinks have not been tested for compatibility with Omnia.
 
-.. note:: ``psutil``` (python system and process utilities) is a cross-platform library for retrieving information on running processes and system utilization (CPU, memory, network).
+.. note:: ``psutil`` (python system and process utilities) is a cross-platform library for retrieving information on running processes and system utilization (CPU, memory, network).
