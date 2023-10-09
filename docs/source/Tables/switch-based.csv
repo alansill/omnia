@@ -228,24 +228,18 @@ Choices:
 " **rhel_repo_alphabetical_folders**
  ``boolean``  [1]_
  
- Required   ","* The repo path and names of the software repository to be configured on the cluster nodes.
-
-* Provide the repo data file path, which ends with .repo extension in repo_url parameter.
-
-* Provide the url for BaseOS and AppStream repositories.
-
-* This variable should be filled if control plane OS is RHEL and subscription is not activated.
-
-* This variable should be filled if the control plane OS is Rocky and the ``provision_os`` is rhel.
+ Required   ","* Indicates whether the packages in local or subscription repos should be ordered in alphabetical directories.
 
 
-Sample value: ::
+* This variable should be filled if control plane OS is RHEL and local RHEL repository is available.
 
 
-		- { repo: ""AppStream"", repo_url: ""http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.8/RHEL-8-appstream.repo"", repo_name: ""RHEL-8-appstream-partners"" }
-		- { repo: ""BaseOS"", repo_url: ""http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.8/RHEL-8-baseos.repo"", repo_name: ""RHEL-8-baseos-partners"" }
 
-		"
+Choices:
+
+``false`` <- Default
+
+``true``                                                                                                      "
 "**rhel_repo_local_path**
                         
 ``JSON list``           
@@ -259,14 +253,17 @@ Optional                ","* The repo path and names of the software repository 
 * This variable should be filled if control plane OS is RHEL and subscription is not activated.    
                                                                                                    
 * This variable should be filled if the control plane OS is Rocky and the ``provision_os`` is rhel.
-                                                                                                   
-Default value:                                                                                     
-                                                                                                   
-- { repo: “AppStream”, repo_url: “”, repo_name: “” }                                               
-                                                                                                   
-- { repo: “BaseOS”, repo_url: “”, repo_name: “” }                                                  
-                                                                                                   
-                                                     "
+
+
+Sample value: ::
+
+
+		- { repo: ""AppStream"", repo_url: ""http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.8/RHEL-8-appstream.repo"", repo_name: ""RHEL-8-appstream-partners"" }
+
+		- { repo: ""BaseOS"", repo_url: ""http://xx.yy.zz/pub/Distros/RedHat/RHEL8/8.8/RHEL-8-baseos.repo"", repo_name: ""RHEL-8-baseos-partners"" }
+
+
+		"
 "**primary_dns**
 
 ``string``
