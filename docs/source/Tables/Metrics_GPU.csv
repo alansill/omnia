@@ -1,13 +1,13 @@
 Metric Name,Unit,Possible value(s),Potential error cause(s)
-gpu_temperature:gpu,Celsius,"* Metric value
+gpu_temperature:gpu,C,"* Metric value
 * No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
               "
-gpu_utilization,Percent,"* Metric value
+gpu_utilization,percent,"* Metric value
 * No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
               "
-gpu_utilization:average,Percent,"* Metric value
+gpu_utilization:average,percent,"* Metric value
 * No data","* AMD/NVIDIA  accelerators are not present.
 * GPU drivers are not installed including Rocm and CUDA.
              "

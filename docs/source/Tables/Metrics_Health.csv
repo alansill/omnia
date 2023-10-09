@@ -1,9 +1,9 @@
 Metric Name,Possible value(s),Possible failure causes
-Dmesg,"* Unknown
+dmesg,"* Unknown
 * Fail
 * Pass","* [Unknown] The dmesg command was not found on the cluster node.
 * [Fail] The dmesg command returned an error log message."
-Beegfs client Reachable,"* Unknown
+beegfs -beegfsstat,"* Unknown
 * Fail
 * Pass","* [Unknown] BeeGFS is not installed or inactive.
 * [Fail] The BeeGFS client service has failed or the node is not present in reachable lists of BeeGFS clients."

@@ -33,8 +33,8 @@ UniqueUserLogin,"``who|cut -f 1 -d "" ""|sort -u|wc -l``","* Locally created use
 * Remote logged in FreeIPA users are counted in ``UniqueUserLogin`` on login nodes.
 ","Login Node/ Manager Node (If Login Node is not present)
 "
-Dmesg,``dmesg --level=err``,,Node Level
-Beegfs client Reachable,"``systemctl is-active beegfs-client``
+dmesg,``dmesg --level=err``,,Node Level
+Beegfs -beegfsstat,"``systemctl is-active beegfs-client``
 ``beegfs-ctl --nodetype=client --listnodes``",,Node Level
 gpu_driver_health:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=driver_version --format=csv,nounits``
 * For AMD GPU: ``rocm-smi --showdriverversion --csv``",,Node Level

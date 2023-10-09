@@ -1,11 +1,11 @@
 Metric Name,Unit,Possible Values,Possible error causes
-BlockedProcesses,Processes,"* Metric Value
+BlockedProcesses,processes,"* Metric Value
 * No Data","* This could happen if the ``/proc/stat`` file is inaccessible.
 "
-CPUSystem,Seconds,"* Metric Value
+CPUSystem,seconds,"* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
-CPUWait,Seconds,"* Metric Value
+CPUWait,seconds,"* Metric Value
 * No Data","* This could happen when the ``psutil``   library encounters errors.
   "
 ErrorsRecv,"","* Metric Value
@@ -17,34 +17,34 @@ ErrorsSent,"","* Metric Value
 FailedJobs,"","* Metric Value
 * No Data","* Slurm is not installed.
 "
-HardwareCorruptedMemory,Kb,"* Metric Value
+HardwareCorruptedMemory,kB,"* Metric Value
 * No Data","* This could happen if the ``/proc/meminfo`` file is inaccessible.
   "
-MemoryActive,Bytes,"* Metric Value
+MemoryActive,bytes,"* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
-MemoryAvailable,Bytes,"* Metric Value
+MemoryAvailable,bytes,"* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
-MemoryCached,Bytes,"* Metric Value
+MemoryCached,bytes,"* Metric Value
 * No Data","* This could happen when the ``psutil``   library encounters errors.
   "
-MemoryFree,Bytes,"* Metric Value
+MemoryFree,bytes,"* Metric Value
 * No Data","* This could happen when the ``psutil``   library encounters errors.
   "
-MemoryInactive,Bytes,"* Metric Value
+MemoryInactive,bytes,"* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
-MemoryPercent,Percent,"* Metric Value
+MemoryPercent,percent,"* Metric Value
 * No Data","* This could happen when the ``psutil``   library encounters errors.
   "
-MemoryShared,Bytes,"* Metric Value
+MemoryShared,bytes,"* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
-MemoryTotal,Bytes,"* Metric Value
+MemoryTotal,bytes,"* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
-MemoryUsed,Bytes,"* Metric Value
+MemoryUsed,bytes,"* Metric Value
 * No Data","* This could happen when the ``psutil``  library encounters errors.
   "
 NodesDown,"","* Metric Value
@@ -69,7 +69,7 @@ RunningJobs,"","* Metric Value
 
 
 "
-SMARTHDATemp,Celsius,"* Metric Value
+SMARTHDATemp,C,"* Metric Value
 * No Data","* ``smartctl`` commands failed.
   "
 UniqueUserLogin,"","* Metric Value
