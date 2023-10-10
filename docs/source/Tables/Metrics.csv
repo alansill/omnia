@@ -21,7 +21,7 @@ down, drained, draining, fail, failing, future, inval, maint, powered_down, powe
 .. note::  Node state with * in suffix will be considered as down.  Example, idle* will be considered as down.",Cluster Level
 NodesTotal,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,,Cluster Level
 NodesUp,``sinfo --format=%N\t%P\t%a\t%C\t%t\t%D\t%m``,"Node is considered up if node state is any of the following:
-idle, mixed, completing or Ready, SchedulingDisabled.
+idle, mixed, completing.
 
 .. note::  Node state with * in suffix will be considered as down node.  Example, idle* will be considered as down node.
 ",Cluster Level
@@ -45,8 +45,8 @@ gpu_health_pmu:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=power.management --
 gpu_health_power:gpu,"For NVIDIA GPU: ``nvidia-smi --query-gpu=pci.bus_id --format=csv,nounits``",Power consumption,Node Level
 gpu_health_thermal:gpu,For AMD GPU: ``rocm-smi --showbus --csv``,GPU temperature health,Node Level
 Kubernetespodsstatus,``sudo kubectl get pods -A -o json``,"Value is pass when all pods and containers are in running state, otherwise Fail.",Cluster Level
-Kuberneteschildnode,``sudo kubectl get nodes -o json``,"Value is pass when all child nodes are in Ready state, otherwise Fail.",Cluster Level
-kubernetesnodesstatus,``sudo kubectl get nodes -o json``,"Value is pass when all nodes are in Ready state, otherwise Fail.",Cluster Level
+Kuberneteschildnode,``sudo kubectl get nodes -o json``,"Value is pass when all child nodes are in Ready or Ready,SchedulingDisabled state, otherwise Fail.",Cluster Level
+kubernetesnodesstatus,``sudo kubectl get nodes -o json``,"Value is pass when all nodes are in Ready or Ready,SchedulingDisabled state, otherwise Fail.",Cluster Level
 kubernetescomponentsstatus,sudo kubectl get --raw=/livez?verbose,"Value is Pass when health check is passed in ``kubectl get --raw=/livez?verbose`` command , otherwise fail.",Cluster Level
 Smart,``smartctl -a <device name>``,,Node Level
 gpu_temperature:gpu,"* For NVIDIA GPU: ``nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits``
