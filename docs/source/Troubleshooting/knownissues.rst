@@ -487,6 +487,6 @@ Reboot the NFS server (external to the cluster) to bring up the services again: 
     systemctl restart nfs-server
 
 
-⦾  **Why do Kuberneteschildnode and kubernetesnodes list nodes with status Ready,SchedulingReady without error?**
+⦾  **Why do Kuberneteschildnode & kubernetesnodes log as Pass in the database even if there are nodes in the Ready,Schedulingdisabled state?**
 
 **Potential Cause**:  Omnia telemetry considers ``Ready,SchedulingDisabled`` as a Ready state of Kubernetes nodes . So, even if the ``kubectl get nodes`` command shows any node’s state as ``Ready,SchedulingDisabled``, the entry in DB for  ``Kuberneteschildnode`` & ``kubernetesnodes`` will be logged as Pass instead of Fail.
