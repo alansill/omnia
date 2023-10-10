@@ -9,15 +9,15 @@ Connecting to internal databases
     * Connect to database: ``\c telemetry_metrics``
 * MySQL DB
     * Go inside the pod: ``kubectl exec -it pod/mysqldb-0 -n telemetry-and-visualizations -- /bin/bash``
-    * Connect to psql: ``mysql -U <mysqldb_username> -p <mysqldb_password>``
+    * Connect to mysql: ``mysql -U <mysqldb_username> -p <mysqldb_password>``
     * Connect to database: ``USE idrac_telemetrysource_services_db``
 
 Checking and updating encrypted parameters
 -----------------------------------------------
 
-1. Move to the filepath where the parameters are saved (as an example, we will be using ``provision_config.yml``):
+1. Move to the filepath where the parameters are saved (as an example, we will be using ``provision_config.yml``): ::
 
-      ``cd input/``
+    cd input/
 
 2. To view the encrypted parameters: ::
 
