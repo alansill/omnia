@@ -24,6 +24,7 @@ Eg: ::
     select * from public.timeseries_metrics;
 
 .. image:: ../../images/TimescaleDB_table.png
+.. image:: ../../images/publictimeseries.png
 
 **Data retention policy**
 
