@@ -18,9 +18,12 @@ Timescale DB
 
 4. Query the database using SQL syntax.
 
-Eg: ``select * from omnia_telemetry.metrics;``
+Eg: ::
 
-    .. image:: ../../images/TimescaleDB_table.png
+    select * from omnia_telemetry.metrics;
+    select * from public.timeseries_metrics;
+
+.. image:: ../../images/TimescaleDB_table.png
 
 **Data retention policy**
 
