@@ -15,7 +15,6 @@ This topic explains how to automatically update servers for MPI jobs. To manuall
     cd benchmarks
     ansible-playbook intel_benchmark.yml -i inventory
 
-After the playbook has run, OpenAPI should be installed and compiled with slurm on all eligible cluster nodes or should be available on the NFS share. Post installation, you can copy benchmark scripts to the NFS share and run jobs.
 
 **To execute multi-node jobs**
 
