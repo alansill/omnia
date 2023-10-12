@@ -9,9 +9,8 @@ This topic explains how to automatically update AMD servers for MPI jobs. To man
 * An Omnia **slurm** cluster has been set up by ``omnia.yml`` running with at least 2 nodes: 1 manager and 1 compute.
 * Verify that the target nodes are in the ``booted`` state. For more information, `click here <../InstallingProvisionTool/ViewingDB.html>`_.
 
-**To run the playbook**
+**To run the playbook**::
 
-::
     cd benchmarks
     ansible-playbook amd_benchmark.yml -i inventory
 
