@@ -52,7 +52,7 @@ With the above parameters, CPU and memory utilization on nodes are as below:
 |                   +-------------------------------------+------------------------------------+-------------------------------------+
 |                   | Average memory utilization: 7.69%   | Average memory utilization: 7.02%  | Average memory utilization: 7.003%  |
 |                   +-------------------------------------+------------------------------------+-------------------------------------+
-|                   | Max number of processes: 7          | Max number of processes: 7         |                                     |
+|                   | Max number of processes: 7          | Max number of processes: 7         |  Max number of processes: 8         |
 +-------------------+-------------------------------------+------------------------------------+-------------------------------------+
 
 
