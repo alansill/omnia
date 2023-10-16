@@ -1,7 +1,7 @@
 Acquiring telemetry data for iDRAC and Omnia
 +++++++++++++++++++++++++++++++++++++++++++++
 
-Using `Texas Technical University data visualization lab <https://idatavisualizationlab.github.io/HPCC>`_, data polled from iDRAC and Slurm can be processed to generate live graphs. These Graphs can be accessed on the Grafana UI.
+Using tools originally developed by `Texas Tech University's iDVL data visualization lab <https://idatavisualizationlab.github.io/HPCC>`_, data polled from iDRAC and Slurm can be processed to generate live graphs. These Graphs can be accessed on the Grafana UI.
 
 Once ``provision.yml`` is executed and Grafana is set up, use ``telemetry.yml`` to initiate the Graphs. Data polled via Slurm and iDRAC is streamed into internal databases. This data is processed to create parallel coordinate graphs.
 
